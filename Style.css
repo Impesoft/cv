@@ -1,0 +1,99 @@
+    @font-face {
+        font-family: 'source_sans_proregular';
+        src        : url('sourcesanspro-regular.woff2') format('woff2'),
+            url('sourcesanspro-regular.woff') format('woff');
+        font-weight: normal;
+        font-style : normal;
+    }
+
+    body {
+        font-family: 'source_sans_proregular';
+    }
+
+    ul.no-bullets {
+        list-style-type: none;
+        /* Remove bullets */
+        padding        : 0;
+        /* Remove padding */
+        margin         : 0;
+        /* Remove margins */
+    }
+#Container {
+            background-color: black;
+            display: flex;
+            width     : 100%;
+            position  : absolute;
+            top       : 0px;
+            left      : auto;
+            margin    : auto;
+            text-align: left;
+            position  : absolute;
+}
+    #Content {
+        display              : flex;
+        /* gap: ; */
+        background-image     : url("background.png");
+        background-position  : left top;
+        background-size      : cover;
+        background-attachment: scroll;
+        background-color     : white;
+        clear                : both;
+        margin               : auto;
+        left                 : auto;
+        top                  : 0px;
+        font-family          : 'source_sans_proregular';
+        width                : 80VW;
+        /* border               : 1px black solid;  */
+      } 
+
+    /* main {
+
+
+    } */
+
+    em {
+        font-style: normal;
+    }
+
+    header {
+        display: block;
+        margin: 15VH 0vw 15vh 0vw;
+        width      : 100%;
+        font-family: 'source_sans_proregular';
+        text-align : center;
+        font-size: 100px;
+        /* border     : 1px blue solid; */
+    }
+    .header-left {
+     margin-left: 5vw;
+        text-align: left;
+    }
+    .header-right {
+
+        text-align: right;
+        margin-right: 5vw;
+    }
+
+    aside.SideBarLeft {
+        width     : 19VW;
+        text-align: left;
+        padding   : 5VH 5VW 0VH 5VW;
+
+
+    }
+
+    aside.SideBarLeft img {
+        width       : 20VW;
+        -webkit-mask: radial-gradient(circle closest-side, #fff 95%, transparent 100%);
+        mask        : radial-gradient(circle closest-side, #fff 95%, transparent 100%);
+        float       : left;
+        left        : 5VW;
+        /* clip-path: circle(90px at center);*/
+    }
+
+    section {
+        margin: 15vh 0vw 5vh 0vw;
+        width : 40VW;
+        /* border: 1px red solid; */
+        padding: 0vh 5vw;
+    }
