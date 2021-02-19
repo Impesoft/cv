@@ -79,8 +79,9 @@
         /* gap: ; */
         background-image     : url("background.png");
         background-position  : left top;
-        background-size      : cover;
+        background-size      :100%;
         background-attachment: scroll;
+        background-repeat: no-repeat;
         background-color     : white;
         clear                : both;
         margin               : auto;
@@ -142,9 +143,23 @@
         /* border: 1px red solid; */
         padding: 0vh 5vw;
         list-style:circle ;
+        margin-bottom: 10vh;
     }
 
     .circle {
         list-style: circle;
     }
-    
+    footer {
+        position: absolute;
+        bottom: 0vw;
+        display: block;
+        width: 80vw;
+        background-color: #eae8e8;
+        color: black;
+        padding: 20px 0px;
+        margin: auto;
+        text-align: center;
+    }
+    footer a {
+        margin: 20px;;
+    }
