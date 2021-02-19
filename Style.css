@@ -1,13 +1,73 @@
-    @font-face {
-        font-family: 'source_sans_proregular';
-        src        : url('sourcesanspro-regular.woff2') format('woff2'),
-            url('sourcesanspro-regular.woff') format('woff');
-        font-weight: normal;
-        font-style : normal;
-    }
+@font-face {
+    font-family: 'source_code_proextralight';
+    src: url('sourcecodepro-extralight-webfont.woff2') format('woff2'),
+         url('sourcecodepro-extralight-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 
+}
+
+
+
+
+@font-face {
+    font-family: 'source_code_prolight';
+    src: url('sourcecodepro-light-webfont.woff2') format('woff2'),
+         url('sourcecodepro-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'source_code_proregular';
+    src: url('sourcecodepro-regular-webfont.woff2') format('woff2'),
+         url('sourcecodepro-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'source_code_prosemibold';
+    src: url('sourcecodepro-semibold-webfont.woff2') format('woff2'),
+         url('sourcecodepro-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'source_code_problack';
+    src: url('sourcecodepro-black-webfont.woff2') format('woff2'),
+         url('sourcecodepro-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'source_code_probold';
+    src: url('sourcecodepro-bold-webfont.woff2') format('woff2'),
+         url('sourcecodepro-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
     body {
-        font-family: 'source_sans_proregular';
+        font-family: 'source_code_prolight';
     }
 
     ul.no-bullets {
@@ -41,7 +101,7 @@
         margin               : auto;
         left                 : auto;
         top                  : 0px;
-        font-family          : 'source_sans_proregular';
+        font-family          : 'source_code_prolight';
         width                : 80VW;
         /* border               : 1px black solid;  */
       } 
@@ -59,7 +119,7 @@
         display: block;
         margin: 15VH 0vw 15vh 0vw;
         width      : 100%;
-        font-family: 'source_sans_proregular';
+        font-family: 'source_code_prolight';
         text-align : center;
         font-size: 100px;
         /* border     : 1px blue solid; */
