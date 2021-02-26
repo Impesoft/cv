@@ -1,165 +1,181 @@
 @font-face {
     font-family: 'source_code_proextralight';
-    src: url('sourcecodepro-extralight-webfont.woff2') format('woff2'),
-         url('sourcecodepro-extralight-webfont.woff') format('woff');
+    src        : url('sourcecodepro-extralight-webfont.woff2') format('woff2'),
+        url('sourcecodepro-extralight-webfont.woff') format('woff');
     font-weight: normal;
-    font-style: normal;
+    font-style : normal;
 
 }
 
 @font-face {
     font-family: 'source_code_prolight';
-    src: url('sourcecodepro-light-webfont.woff2') format('woff2'),
-         url('sourcecodepro-light-webfont.woff') format('woff');
+    src        : url('sourcecodepro-light-webfont.woff2') format('woff2'),
+        url('sourcecodepro-light-webfont.woff') format('woff');
     font-weight: normal;
-    font-style: normal;
+    font-style : normal;
 
 }
 
 @font-face {
     font-family: 'source_code_proregular';
-    src: url('sourcecodepro-regular-webfont.woff2') format('woff2'),
-         url('sourcecodepro-regular-webfont.woff') format('woff');
+    src        : url('sourcecodepro-regular-webfont.woff2') format('woff2'),
+        url('sourcecodepro-regular-webfont.woff') format('woff');
     font-weight: normal;
-    font-style: normal;
+    font-style : normal;
 
 }
 
 @font-face {
     font-family: 'source_code_prosemibold';
-    src: url('sourcecodepro-semibold-webfont.woff2') format('woff2'),
-         url('sourcecodepro-semibold-webfont.woff') format('woff');
+    src        : url('sourcecodepro-semibold-webfont.woff2') format('woff2'),
+        url('sourcecodepro-semibold-webfont.woff') format('woff');
     font-weight: normal;
-    font-style: normal;
+    font-style : normal;
 
 }
 
 @font-face {
     font-family: 'source_code_problack';
-    src: url('sourcecodepro-black-webfont.woff2') format('woff2'),
-         url('sourcecodepro-black-webfont.woff') format('woff');
+    src        : url('sourcecodepro-black-webfont.woff2') format('woff2'),
+        url('sourcecodepro-black-webfont.woff') format('woff');
     font-weight: normal;
-    font-style: normal;
+    font-style : normal;
 
 }
 
 @font-face {
     font-family: 'source_code_probold';
-    src: url('sourcecodepro-bold-webfont.woff2') format('woff2'),
-         url('sourcecodepro-bold-webfont.woff') format('woff');
+    src        : url('sourcecodepro-bold-webfont.woff2') format('woff2'),
+        url('sourcecodepro-bold-webfont.woff') format('woff');
     font-weight: normal;
-    font-style: normal;
-
+    font-style : normal;
 }
-    body {
-        font-family: 'Century Gothic';
-    }
 
-    ul.no-bullets {
-        list-style-type: none;
-        /* Remove bullets */
-        padding        : 0;
-        /* Remove padding */
-        margin         : 0;
-        /* Remove margins */
-    }
 #Container {
-            background-color: black;
-            display: flex;
-            width     : 100%;
-            position  : absolute;
-            top       : 0px;
-            left      : auto;
-            margin    : auto;
-            text-align: left;
-            position  : absolute;
+    background-color: black;
+    display         : flex;
+    width           : 100%;
+    position        : absolute;
+    top             : 0px;
+    left            : auto;
+    margin          : auto;
+    text-align      : left;
 }
-    #Content {
-        display              : flex;
-        /* gap: ; */
-        background-image     : url("background.png");
-        background-position  : left top;
-        background-size      :100%;
-        background-attachment: scroll;
-        background-repeat: no-repeat;
-        background-color     : white;
-        clear                : both;
-        margin               : auto;
-        left                 : auto;
-        top                  : 0px;
-        font-family          : 'source_code_proregular';
-        width                : 80VW;
-        /* border               : 1px black solid;  */
-      } 
 
-    /* main {
+#Content {
+    display                 : flex;
+    flex-direction          : column;
+    background-image        : url("background.png");
+    background-position     : left top;
+    background-size         : 100%;
+    background-attachment   : scroll;
+    background-repeat       : no-repeat;
+    background-color        : white;
+    margin                  : auto;
+    top                     : 0px;
+    font-family             : 'source_code_proregular';
+    width                   : 80VW;
+    /* border               : 1px red solid;  */
+}
+
+em {
+    font-style: normal;
+}
+
+main {
+    display       : flex;
+    flex-direction: row;
+    margin: 0 0 5vh 0 ;
+}
+
+header {
+    display       : flex;
+    flex-direction: row;
+    flex-wrap     : wrap;
+    margin        : 15VH 0vw 0vh 0vw;
+    width         : 100%;
+    font-family   : 'source_code_prolight';
+    text-align    : center;
+    font-size     : 7rem;
+}
+
+.mug-shot {
+    width       : 20VW;
+    -webkit-mask: radial-gradient(circle closest-side, #fff 95%, transparent 100%);
+    mask        : radial-gradient(circle closest-side, #fff 95%, transparent 100%);
+    /* clip-path: circle(90px at center);*/
+    
+}
+
+.header-text {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 50vw;
+    min-width: 455px;
+    margin-left: 5vw;
+    /* border : 1px rgb(212, 120, 0) solid; */
+    
+}
+
+.header-img {
+    /* border : 1px rgb(212, 120, 0) solid; */
+    margin: 0 0 0 5vw ;
+
+}
+
+.header-left {
+    margin: 0;
+    height: fit-content;
+    /* border: 1px blue solid; */
+}
+
+.header-right {
+
+    margin      : auto;
+    margin-right: 0;
+    /* border      : 1px blue solid; */
+
+}
 
 
-    } */
+aside.SideBarLeft {
+    width     : 19VW;
+    text-align: left;
+    padding   : 0VH 5VW 0VH 5VW;
 
-    em {
-        font-style: normal;
-    }
+}
 
-    header {
-        display: block;
-        margin: 15VH 0vw 15vh 0vw;
-        width      : 100%;
-        font-family: 'source_code_prolight';
-        text-align : center;
-        font-size: 100px;
-        /* border     : 1px blue solid; */
-    }
-    .header-left {
-     margin-left: 5vw;
-        text-align: left;
-    }
-    .header-right {
-
-        text-align: right;
-        margin-right: 5vw;
-    }
-
-    aside.SideBarLeft {
-        width     : 19VW;
-        text-align: left;
-        padding   : 5VH 5VW 0VH 5VW;
+section {
+    margin    : 0vh 0vw 5vh 0vw;
+    width     : 40VW;
+    padding   : 0vh 5vw;
+    list-style: circle;
+}
 
 
-    }
 
-    aside.SideBarLeft img {
-        width       : 20VW;
-        -webkit-mask: radial-gradient(circle closest-side, #fff 95%, transparent 100%);
-        mask        : radial-gradient(circle closest-side, #fff 95%, transparent 100%);
-        float       : left;
-        left        : 5VW;
-        /* clip-path: circle(90px at center);*/
-    }
 
-    section {
-        margin: 15vh 0vw 5vh 0vw;
-        width : 40VW;
-        /* border: 1px red solid; */
-        padding: 0vh 5vw;
-        list-style:circle ;
-        margin-bottom: 10vh;
-    }
 
-    .circle {
-        list-style: circle;
-    }
-    footer {
-        position: absolute;
-        bottom: 0vw;
-        display: block;
-        width: 80vw;
-        background-color: #eae8e8;
-        color: black;
-        padding: 20px 0px;
-        margin: auto;
-        text-align: center;
-    }
-    footer a {
-        margin: 20px;;
-    }
+
+
+.circle {
+    list-style: circle;
+}
+
+footer {
+    position        : absolute;
+    bottom          : 0vw;
+    display         : block;
+    width           : 80vw;
+    background-color: #eae8e8;
+    color           : black;
+    padding         : 20px 0px;
+    margin          : auto;
+    text-align      : center;
+}
+
+footer a {
+    margin: 20px;
+    ;
+}
