@@ -77,9 +77,11 @@
     width                   : 80VW;
     /* border               : 1px red solid;  */
 }
+
 em {
     font-style: normal;
 }
+
 ul.no-bullets {
     list-style-type: none;
     /* Remove bullets */
@@ -88,10 +90,11 @@ ul.no-bullets {
     margin         : 0;
     /* Remove margins */
 }
+
 main {
     display       : flex;
     flex-direction: row;
-    margin: 0 0 5vh 0 ;
+    margin        : 0 0 5vh 0;
 }
 
 header {
@@ -110,37 +113,37 @@ header {
     -webkit-mask: radial-gradient(circle closest-side, #fff 95%, transparent 100%);
     mask        : radial-gradient(circle closest-side, #fff 95%, transparent 100%);
     /* clip-path: circle(90px at center);*/
-    
+
 }
 
 
 .header-text {
-    display: flex;
+    display       : flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    width: 50vw;
-    min-width: 500px;
-    margin-left: 5vw;
-    /* border : 1px rgb(212, 120, 0) solid; */
-    
+    flex-wrap     : wrap;
+    width         : 50vw;
+    min-width     : 500px;
+    margin-left   : 5vw;
+    /* border     : 1px rgb(212, 120, 0) solid; */
+
 }
 
 .header-img {
     /* border : 1px rgb(212, 120, 0) solid; */
-    margin: 0 0 0 5vw ;
+    margin: 0 0 0 5vw;
 
 }
 
 .header-left {
     margin-left: 5vw;
-    height: fit-content;
-    /* border: 1px blue solid; */
+    height     : fit-content;
+    /* border  : 1px blue solid; */
 }
 
 .header-right {
 
-    margin      : auto;
-    margin-right: 5vw;
+    margin         : auto;
+    margin-right   : 5vw;
     /* border      : 1px blue solid; */
 
 }
@@ -150,12 +153,14 @@ aside.SideBarLeft {
     text-align: left;
     padding   : 0VH 5VW 0VH 5VW;
 }
+
 section {
     margin    : 0vh 0vw 5vh 0vw;
     width     : 40VW;
     padding   : 0vh 5vw;
     list-style: circle;
 }
+
 .circle {
     list-style: circle;
 }
@@ -176,38 +181,49 @@ footer a {
     margin: 20px;
     ;
 }
-@media screen and (max-width: 999px)
-{
-    #content  {
-        background-image:none;
-        min-width: 640px; ;
+
+@media screen and (max-width: 999px) {
+    #content {
+        width           : 100%;
+        background-image: none;
+        min-width       : 640px;
+        ;
     }
+
     .mug-shot {
         width: 50vw;
     }
+
     header {
-        width: 60vw;
+        width : 60vw;
         margin: 0 auto;
     }
+
     main {
         flex-wrap: wrap;
     }
+
     aside.SideBarLeft {
-        width: 70vw;
-        margin: 0 auto;
-        padding: 0 5vw;
+        width    : 70vw;
+        margin   : 0 auto;
+        padding  : 0 5vw;
         font-size: 2.5rem;
     }
+
     aside.SideBarLeft table {
-        margin: 5vh 0;
-        width: 80vw;
-        padding: 0 5vw;
+        margin   : 5vh 0;
+        width    : 80vw;
+        padding  : 0 5vw;
         font-size: 2.5rem;
     }
+
     section {
         font-size: 2.5rem;
-width: 70vw;
-margin: 0 auto;
+        width    : 70vw;
+        margin   : 0 auto;
+    }
+
+    footer {
+        width: 100%;
     }
 }
-
