@@ -180,6 +180,7 @@ footer a {
 {
     #content  {
         background-image:none;
+        min-width: 640px; ;
     }
     .mug-shot {
         width: 50vw;
