@@ -77,11 +77,17 @@
     width                   : 80VW;
     /* border               : 1px red solid;  */
 }
-
 em {
     font-style: normal;
 }
-
+ul.no-bullets {
+    list-style-type: none;
+    /* Remove bullets */
+    padding        : 0;
+    /* Remove padding */
+    margin         : 0;
+    /* Remove margins */
+}
 main {
     display       : flex;
     flex-direction: row;
@@ -107,12 +113,13 @@ header {
     
 }
 
+
 .header-text {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     width: 50vw;
-    min-width: 455px;
+    min-width: 500px;
     margin-left: 5vw;
     /* border : 1px rgb(212, 120, 0) solid; */
     
@@ -125,7 +132,7 @@ header {
 }
 
 .header-left {
-    margin: 0;
+    margin-left: 5vw;
     height: fit-content;
     /* border: 1px blue solid; */
 }
@@ -133,32 +140,22 @@ header {
 .header-right {
 
     margin      : auto;
-    margin-right: 0;
+    margin-right: 5vw;
     /* border      : 1px blue solid; */
 
 }
-
 
 aside.SideBarLeft {
     width     : 19VW;
     text-align: left;
     padding   : 0VH 5VW 0VH 5VW;
-
 }
-
 section {
     margin    : 0vh 0vw 5vh 0vw;
     width     : 40VW;
     padding   : 0vh 5vw;
     list-style: circle;
 }
-
-
-
-
-
-
-
 .circle {
     list-style: circle;
 }
@@ -179,3 +176,37 @@ footer a {
     margin: 20px;
     ;
 }
+@media screen and (max-width: 999px)
+{
+    #content  {
+        background-image:none;
+    }
+    .mug-shot {
+        width: 50vw;
+    }
+    header {
+        width: 60vw;
+        margin: 0 auto;
+    }
+    main {
+        flex-wrap: wrap;
+    }
+    aside.SideBarLeft {
+        width: 70vw;
+        margin: 0 auto;
+        padding: 0 5vw;
+        font-size: 2.5rem;
+    }
+    aside.SideBarLeft table {
+        margin: 5vh 0;
+        width: 80vw;
+        padding: 0 5vw;
+        font-size: 2.5rem;
+    }
+    section {
+        font-size: 2.5rem;
+width: 70vw;
+margin: 0 auto;
+    }
+}
+
