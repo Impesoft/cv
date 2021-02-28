@@ -199,7 +199,7 @@ footer a {
         width              : 100%;
         background-image   : none;
         background-color   : #eae8e8;
-        /* min-width       : 640px; */
+        min-width       : 640px;
         ;
     }
 
@@ -241,7 +241,7 @@ footer a {
     }
 }
 
-@media screen and (max-width: 640x) {
+/* @media screen and (max-width: 640x) {
 
     #content {
         width           : 100%;
@@ -287,7 +287,7 @@ footer a {
         width: 100%;
     }
 
-}
+} */
 
 @media print {
     @page {
