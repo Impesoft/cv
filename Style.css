@@ -136,6 +136,7 @@ header {
     width         : 50vw;
     min-width     : 500px;
     margin-left   : 5vw;
+    margin-top    : 10vh;
     /* border     : 1px rgb(212, 120, 0) solid; */
 
 }
@@ -159,22 +160,27 @@ header {
     /* border      : 1px blue solid; */
 
 }
+
 a {
     text-decoration: none;
-    color: black;
+    color          : black;
 }
+
 aside.SideBarLeft {
     width     : 19VW;
     text-align: left;
     padding   : 0VH 5VW 0VH 5VW;
 }
+
 aside.SideBarLeft table {
-    margin   : 0vh 0;
-    width    : 19vw;
+    margin: 0vh 0;
+    width : 19vw;
 }
+
 h3 {
     text-decoration: underline;
 }
+
 section {
     margin    : 0vh 0vw 5vh 0vw;
     width     : 40VW;
@@ -205,9 +211,9 @@ footer a {
 
 @media screen and (max-width: 999px) {
     #content {
-        width              : 100%;
-        background-image   : none;
-        background-color   : #eae8e8;
+        width           : 100%;
+        background-image: none;
+        background-color: #eae8e8;
         min-width       : 640px;
         ;
     }
@@ -220,7 +226,9 @@ footer a {
         width : 60vw;
         margin: 0 auto;
     }
-
+    .header-text {
+        margin-top: 0;
+    }
     main {
         flex-wrap: wrap;
     }
@@ -312,7 +320,7 @@ footer a {
     }
 
     main {
-        width: 100%;
+        width        : 100%;
         margin-bottom: 0px;
     }
 
