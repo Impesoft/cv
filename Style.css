@@ -165,7 +165,13 @@ aside.SideBarLeft {
     text-align: left;
     padding   : 0VH 5VW 0VH 5VW;
 }
-
+aside.SideBarLeft table {
+    margin   : 0vh 0;
+    width    : 19vw;
+}
+h3 {
+    text-decoration: underline;
+}
 section {
     margin    : 0vh 0vw 5vh 0vw;
     width     : 40VW;
