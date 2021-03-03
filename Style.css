@@ -173,7 +173,7 @@ aside.SideBarLeft {
 }
 
 aside.SideBarLeft table {
-    margin: 0vh 0;
+    margin: 2vh 0;
     width : 19vw;
 }
 
@@ -257,6 +257,10 @@ footer a {
         width: 100%;
     }
 }
+h4,
+h3 {
+    margin-bottom: 0px;
+}
 
 /* @media screen and (max-width: 640x) {
 
@@ -310,7 +314,9 @@ footer a {
     @page {
         margin: 0 auto;
     }
-
+    .header-text {
+        margin-top: 2vh;
+    }
     /* body { margin: .5cm; } */
 
     #content {
@@ -347,12 +353,6 @@ footer a {
         height     : fit-content;
         /* border  : 1px blue solid; */
     }
-
-    h4,
-    h3 {
-        margin-bottom: 0px;
-    }
-
     .header-right {
 
         margin         : auto;
@@ -377,7 +377,7 @@ footer a {
     }
 
     aside.SideBarLeft table {
-        margin   : 5vh 0vw;
+        margin   : 2vh 0vw;
         width    : 15vw;
         padding  : 0 0vw;
         font-size: .8rem;
