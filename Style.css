@@ -1,399 +1,248 @@
-html, body, div {
-  margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    padding-left: 5px;
+    box-sizing: border-box;
 }
 
+body, html {
+    font-family: 'source_code_proregular', sans-serif;
+    font-size: 16px; /* Default font size */
+    color: #333;
+    height: 100%;
+}
+
+/* Font-face declarations */
 @font-face {
     font-family: 'source_code_proextralight';
-    src        : url('sourcecodepro-extralight-webfont.woff2') format('woff2'),
-        url('sourcecodepro-extralight-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style : normal;
-
+    src: url('sourcecodepro-extralight-webfont.woff2') format('woff2'),
+         url('sourcecodepro-extralight-webfont.woff') format('woff');
 }
 
 @font-face {
     font-family: 'source_code_prolight';
-    src        : url('sourcecodepro-light-webfont.woff2') format('woff2'),
-        url('sourcecodepro-light-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style : normal;
-
+    src: url('sourcecodepro-light-webfont.woff2') format('woff2'),
+         url('sourcecodepro-light-webfont.woff') format('woff');
 }
 
 @font-face {
     font-family: 'source_code_proregular';
-    src        : url('sourcecodepro-regular-webfont.woff2') format('woff2'),
-        url('sourcecodepro-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style : normal;
-
+    src: url('sourcecodepro-regular-webfont.woff2') format('woff2'),
+         url('sourcecodepro-regular-webfont.woff') format('woff');
 }
 
 @font-face {
     font-family: 'source_code_prosemibold';
-    src        : url('sourcecodepro-semibold-webfont.woff2') format('woff2'),
-        url('sourcecodepro-semibold-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style : normal;
-
+    src: url('sourcecodepro-semibold-webfont.woff2') format('woff2'),
+         url('sourcecodepro-semibold-webfont.woff') format('woff');
 }
 
 @font-face {
     font-family: 'source_code_problack';
-    src        : url('sourcecodepro-black-webfont.woff2') format('woff2'),
-        url('sourcecodepro-black-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style : normal;
-
+    src: url('sourcecodepro-black-webfont.woff2') format('woff2'),
+         url('sourcecodepro-black-webfont.woff') format('woff');
 }
 
 @font-face {
     font-family: 'source_code_probold';
-    src        : url('sourcecodepro-bold-webfont.woff2') format('woff2'),
-        url('sourcecodepro-bold-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style : normal;
+    src: url('sourcecodepro-bold-webfont.woff2') format('woff2'),
+         url('sourcecodepro-bold-webfont.woff') format('woff');
 }
 
-#Container {
-    background-color: black;
-    display         : flex;
-    width           : 100%;
-    position        : absolute;
-    top             : 0px;
-    left            : auto;
-    margin          : auto;
-    text-align      : left;
-}
-
-#Content {
-    display                 : flex;
-    flex-direction          : column;
-    background-image        : url("background.png");
-    background-position     : left top;
-    background-size         : 100%;
-    background-attachment   : scroll;
-    background-repeat       : no-repeat;
-    background-color        : white;
-    margin                  : auto;
-    top                     : 0px;
-    font-family             : 'source_code_proregular';
-    width                   : 80VW;
-    /* border               : 1px red solid;  */
-}
-
-@-webkit-keyframes animate-stripes {
-    100% {
-        background-position: -100px 0px;
-    }
-}
-
-@keyframes animate-stripes {
-    100% {
-        background-position: -100px 0px;
-    }
-}
-
-em {
-    font-style: normal;
-}
-
-ul.no-bullets {
-    list-style-type: none;
-    /* Remove bullets */
-    padding        : 0;
-    /* Remove padding */
-    margin         : 0;
-    /* Remove margins */
-}
-
-main {
-    display       : flex;
-    flex-direction: row;
-    margin        : 0 0 5vh 0;
+/* Layout styles */
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    padding-top: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh;
+    position: relative;
 }
 
 header {
-    display       : flex;
-    flex-direction: row;
-    flex-wrap     : wrap;
-    margin        : 15VH 0vw 0vh 0vw;
-    width         : 100%;
-    font-family   : 'source_code_prolight';
-    text-align    : center;
-    font-size     : 7rem;
-}
-
-.mug-shot {
-    width       : 20VW;
-    -webkit-mask: radial-gradient(circle closest-side, #fff 95%, transparent 100%);
-    mask        : radial-gradient(circle closest-side, #fff 95%, transparent 100%);
-    /* clip-path: circle(90px at center);*/
-
-}
-
-
-.header-text {
-    display       : flex;
-    flex-direction: row;
-    flex-wrap     : wrap;
-    width         : 50vw;
-    min-width     : 500px;
-    margin-left   : 5vw;
-    margin-top    : 10vh;
-    /* border     : 1px rgb(212, 120, 0) solid; */
+    display: flex;
+    align-items: center;
+    margin-bottom: 0px;
+    width: 100%;
+    background-color: white;
+    padding: 10px;
+    padding-bottom: 0;
+    border-radius: 8px;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    background: url('background.svg') no-repeat top right;
+    background-size: cover;
+    z-index: -1;
 
 }
 
 .header-img {
-    /* border : 1px rgb(212, 120, 0) solid; */
-    margin: 0 0 0 5vw;
+    padding: 50px 20px 0px 50px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
 
+.mug-shot {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.header-text {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 3rem;
+    padding: 50px;
+}
+
+.header-left,
+.header-right {
+    width: 100%;
 }
 
 .header-left {
-    margin-left: 5vw;
-    height     : fit-content;
-    /* border  : 1px blue solid; */
+    text-align: left;
+    margin-right: 0.5rem;
 }
 
 .header-right {
+    text-align: right;
+    margin-left: 0.5rem;
+}
 
-    margin         : auto;
-    margin-right   : 5vw;
-    /* border      : 1px blue solid; */
+main {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    position: relative;
+}
+
+main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.sidebar {
+    min-width: 345px;
+    flex: 1;
+        background-color: #f4f4f4;
+        border-left: 1px solid #f0f0f0;
+        border-right: 1px solid #f0f0f0;
 
 }
 
-a {
-    text-decoration: none;
-    color          : black;
+.sidebar section {
+    margin-bottom: 20px;
 }
 
-aside.SideBarLeft {
-    width     : 19VW;
-    text-align: left;
-    padding   : 0VH 5VW 0VH 5VW;
+.skills li {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.skills li progress {
+    width: 100%;
+    height: 10px;
 }
 
-aside.SideBarLeft table {
-    margin: 2vh 0;
-    width : 19vw;
+.skills li progress::-webkit-progress-bar {
+    background-color: #f4f4f4;
 }
 
-h3 {
-    text-decoration: underline;
+.skills li progress::-webkit-progress-value {
+    background-color: #007BFF;
+}
+.content {
+    flex: 3;
 }
 
-section {
-    margin    : 0vh 0vw 5vh 0vw;
-    width     : 40VW;
-    padding   : 0vh 5vw;
-    list-style: circle;
+ul {
+    list-style-type: none;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
-.circle {
-    list-style: circle;
+ul li {
+    margin-bottom: 10px;
 }
 
+/* Footer styles */
 footer {
-    position        : absolute;
-    bottom          : 0vw;
-    display         : block;
-    width           : 80vw;
-    background-color: #eae8e8;
-    color           : black;
-    padding         : 20px 0px;
-    margin          : auto;
-    text-align      : center;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    /* background-color: #eae8e8; */
+    width: 100%;
+    position: absolute;
+    bottom: 0;
 }
 
-footer a {
-    margin: 20px;
-    ;
-}
-
-@media screen and (max-width: 999px) {
-    #content {
-        width           : 100%;
-        background-image: none;
-        background-color: #eae8e8;
-        min-width       : 640px;
-        ;
-    }
-
-    .mug-shot {
-        width: 50vw;
-    }
-
-    header {
-        width : 60vw;
-        margin: 0 auto;
-    }
-    .header-text {
-        margin-top: 0;
-    }
-    main {
-        flex-wrap: wrap;
-    }
-
-    aside.SideBarLeft {
-        width    : 70vw;
-        margin   : 0 auto;
-        padding  : 0 5vw;
-        font-size: 2.5rem;
-    }
-
-    aside.SideBarLeft table {
-        margin   : 5vh 0;
-        width    : 80vw;
-        padding  : 0 5vw;
-        font-size: 2.5rem;
-    }
-
-    section {
-        font-size: 2.5rem;
-        width    : 70vw;
-        margin   : 0 auto;
-    }
-
-    footer {
-        width: 100%;
-    }
-}
-h4,
 h3 {
-    margin-bottom: 0px;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    margin-top: 10px;
 }
 
-/* @media screen and (max-width: 640x) {
-
-    #content {
-        width           : 100%;
-        background-image: none;
-        background-color: #222222;
-    }
-
-    .mug-shot {
-        width: 100vw;
-    }
-
-    header {
-        width : 100vw;
-        margin: 0;
-    }
-
-    main {
-        flex-wrap: wrap;
-    }
-
-    aside.SideBarLeft {
-        width    : 100vw;
-        margin   : 0;
-        padding  : 0 1vw;
-        font-size: 2.5rem;
-    }
-
-    aside.SideBarLeft table {
-        margin   : 5vh 0;
-        width    : 80vw;
-        padding  : 0 5vw;
-        font-size: 2.5rem;
-    }
-
-    section {
-        font-size: 2.5rem;
-        width    : 100vw;
-        margin   : 0;
-        padding  : 0 1vw;
-    }
-
-    footer {
-        width: 100%;
-    }
-
-} */
-
+/* Print styles */
 @media print {
     @page {
-        margin: 0 auto;
-    }
-    .header-text {
-        margin-top: 2vh;
-    }
-    /* body { margin: .5cm; } */
-
-    #content {
-        color-adjust: exact;
-        flex-wrap   : nowrap;
-        width       : 100%;
+        margin: 1cm;
     }
 
-    main {
-        width        : 100%;
-        margin-bottom: 0px;
-    }
-
-    .mug-shot {
-        width       : 25vw;
-        -webkit-mask: radial-gradient(circle closest-side, #fff 95%, transparent 100%);
-        mask        : radial-gradient(circle closest-side, #fff 95%, transparent 100%);
-        clip-path   : circle(40% at center);
+    header, footer {
+        position: static;
+        width: 100%;
     }
 
     header {
-        display       : flex;
-        flex-direction: row;
-        flex-wrap     : nowrap;
-        margin        : 0;
-        width         : 100%;
-        font-family   : 'source_code_prolight';
-        text-align    : center;
-        font-size     : 5rem;
-    }
-
-    .header-left {
-        margin-left: 0vw;
-        height     : fit-content;
-        /* border  : 1px blue solid; */
-    }
-    .header-right {
-
-        margin         : auto;
-        margin-right   : 0vw;
-        /* border      : 1px blue solid; */
-
-    }
-
-    section {
-        margin    : 0vh 0vw 0vh 2vw;
-        width     : 75VW;
-        padding   : 0vh 1vw;
-        list-style: circle;
-        font-size : .8rem;
-    }
-
-    aside.SideBarLeft {
-        width    : 25vw;
-        margin   : 0;
-        padding  : 0;
-        font-size: .8rem;
-    }
-
-    aside.SideBarLeft table {
-        margin   : 2vh 0vw;
-        width    : 15vw;
-        padding  : 0 0vw;
-        font-size: .8rem;
+        top: 0;
+        background: white;
+        padding-bottom: 0;
     }
 
     footer {
-        display: none;
-        height : 0px;
+        bottom: 0;
+    }
+
+    main {
+        margin-top: 60px;
+        margin-bottom: 50px;
+        font-size: 12px; /* smaller font size for print*/
+
+    }
+.newpage {
+    page-break-before: always;
+}
+    header, main, .sidebar, .content {
+        page-break-inside: avoid;
+    }
+
+    .sidebar section {
+        page-break-before: avoid;
+    }
+
+    .content ul {
+        margin-top: 0;
+    }
+
+    .content ul li {
+        margin-bottom: 5px;
     }
 }
