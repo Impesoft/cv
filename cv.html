@@ -10,7 +10,309 @@
       integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="Style.css" />
+    <style>
+      /* Reset and base styles */
+      * {
+        margin: 0;
+        padding: 0;
+        padding-left: 5px;
+        box-sizing: border-box;
+      }
+
+      body,
+      html {
+        font-family: 'source_code_proregular', sans-serif;
+        font-size: 16px;
+        /* Default font size */
+        color: #333;
+        height: 100%;
+        background-color: black;
+      }
+
+      /* Font-face declarations */
+      @font-face {
+        font-family: 'source_code_proextralight';
+        src: url('sourcecodepro-extralight-webfont.woff2') format('woff2'),
+          url('sourcecodepro-extralight-webfont.woff') format('woff');
+      }
+
+      @font-face {
+        font-family: 'source_code_prolight';
+        src: url('sourcecodepro-light-webfont.woff2') format('woff2'),
+          url('sourcecodepro-light-webfont.woff') format('woff');
+      }
+
+      @font-face {
+        font-family: 'source_code_proregular';
+        src: url('sourcecodepro-regular-webfont.woff2') format('woff2'),
+          url('sourcecodepro-regular-webfont.woff') format('woff');
+      }
+
+      @font-face {
+        font-family: 'source_code_prosemibold';
+        src: url('sourcecodepro-semibold-webfont.woff2') format('woff2'),
+          url('sourcecodepro-semibold-webfont.woff') format('woff');
+      }
+
+      @font-face {
+        font-family: 'source_code_problack';
+        src: url('sourcecodepro-black-webfont.woff2') format('woff2'),
+          url('sourcecodepro-black-webfont.woff') format('woff');
+      }
+
+      @font-face {
+        font-family: 'source_code_probold';
+        src: url('sourcecodepro-bold-webfont.woff2') format('woff2'),
+          url('sourcecodepro-bold-webfont.woff') format('woff');
+      }
+
+      /* Layout styles */
+      #container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        padding-top: 0px;
+        padding-right: 0;
+        max-width: 1200px;
+        margin: 0 auto;
+        min-height: 100vh;
+        position: relative;
+        background-color: white;
+      }
+
+      header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0px;
+        width: 100%;
+        background-color: white;
+        padding: 10px;
+        padding-bottom: 0;
+        border-radius: 8px;
+        /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+        background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="100%25" height="100%25" viewBox="0 0 1200 800"><path stroke="%23f0f0f0" d="M5 150 A75 75 0 0 1 25 100 A75 75 ,0, 0 0 50, 50 A50 50 ,0, 0 1 100, 0 L1200 0 V50 H430 A 80 50 0 0 0 355 100 V800 H0 Z" fill="%23f4f4f4"/></svg>') no-repeat top right;
+        background-size: cover;
+        z-index: 1;
+      }
+
+      .header-img {
+        padding: 50px 20px 0px 50px;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+      }
+
+      .mug-shot {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .header-text {
+        flex: 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        font-size: 3rem;
+        padding: 50px;
+      }
+
+      .header-left,
+      .header-right {
+        width: 100%;
+      }
+
+      .header-left {
+        text-align: left;
+        margin-right: 0.5rem;
+      }
+
+      .header-right {
+        text-align: right;
+        margin-left: 0.5rem;
+      }
+
+      main {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        width: 100%;
+        position: relative;
+        padding-right: 20px;
+      }
+
+      main::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+      }
+
+      .sidebar {
+        min-width: 347px;
+        flex: 1;
+        background-color: #f4f4f4;
+        border-left: 1px solid #f0f0f0;
+        border-right: 1px solid #f0f0f0;
+      }
+
+      .sidebar section {
+        margin-bottom: 20px;
+      }
+
+      .skills li {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+      .skills li progress {
+        width: 100%;
+        height: 10px;
+      }
+
+      .skills li progress::-webkit-progress-bar {
+        background-color: #f4f4f4;
+      }
+
+      .skills li progress::-webkit-progress-value {
+        background-color: #007BFF;
+      }
+
+      .content {
+        flex: 3;
+      }
+
+      ul {
+        list-style-type: none;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      ul li {
+        margin-bottom: 10px;
+      }
+
+      /* Footer styles */
+      footer {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 0;
+        /* background-color: #eae8e8; */
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+      }
+
+      h3 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        margin-top: 10px;
+      }
+      h4 {
+        margin: 10px;
+      }
+      .bigger-text {
+        font-size: 1.2em;
+        margin: 1px;
+      }
+      /* Margin for job descriptions */
+      .job-description {
+        margin-top: 5px;
+        margin-left: 5px;
+        display: block;
+      }
+
+      /* Print styles */
+      @media print {
+        @page {
+          margin: 1cm;
+          background-color: white;
+        }
+        .sidebar {
+          width: 30%;
+          min-width: 265px;
+          padding-left: 0;
+        }
+        h3 {
+          font-size: 1rem;
+          margin-bottom: 20px;
+          margin-top: 10px;
+          margin-left: 0;
+        }
+
+        .content {
+          width: 70%;
+        }
+        body,
+        html {
+          font-size: 12px;
+          /* smaller font size for print*/
+          background-color: white;
+        }
+        header,
+        footer {
+          position: static;
+          width: 100%;
+        }
+
+        header {
+          top: 0;
+          background: white;
+          background-image: none;
+          width: 100%;
+          background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="100%25" height="100%25" viewBox="0 0 1200 800"><path stroke="%23f0f0f0" d="M5 150 A75 75 0 0 1 25 100 A75 75 ,0, 0 0 50, 50 A50 50 ,0, 0 1 100, 0 L1200 0 V50 H530 A 80 50 0 0 0 455 100 V800 H0 Z" fill="%23f4f4f4"/></svg>') no-repeat top right;
+          background-size: cover;
+          padding-bottom: 0;
+          margin-bottom: 0;
+        }
+
+        footer {
+          bottom: 0;
+        }
+
+        main {
+          margin-top: 0px;
+          margin-bottom: 50px;
+          font-size: 12px;
+          /* smaller font size for print*/
+          margin-left: 0;
+          padding-left: 0;
+        }
+        .newpage {
+          page-break-before: always;
+        }
+        header,
+        main,
+        .sidebar,
+        .content {
+          page-break-inside: avoid;
+        }
+
+        .sidebar section {
+          page-break-before: avoid;
+          padding-left: 0;
+          margin-left: 0;
+        }
+
+        .content ul {
+          margin-top: 0;
+        }
+
+        .content ul li {
+          margin-bottom: 5px;
+        }
+      }
+    </style>
   </head>
   <body>
     <div id="container">
