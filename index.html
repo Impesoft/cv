@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ward Impe's Curriculum Vitae</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
@@ -11,35 +14,21 @@
       crossorigin="anonymous"
     />
     <style>
-      /* Reset and base styles */
       * {
         margin: 0;
         padding: 0;
-        padding-left: 5px;
         box-sizing: border-box;
       }
-
       body,
       html {
-        font-family: 'source_code_proregular', sans-serif;
+        /* font-family: 'source_code_proregular', sans-serif; */
+        font-family: "Roboto", serif;
+        font-weight: 300;
+        font-style: normal;
         font-size: 16px;
-        /* Default font size */
         color: #333;
         height: 100%;
         background-color: black;
-      }
-
-      /* Font-face declarations */
-      @font-face {
-        font-family: 'source_code_proextralight';
-        src: url('sourcecodepro-extralight-webfont.woff2') format('woff2'),
-          url('sourcecodepro-extralight-webfont.woff') format('woff');
-      }
-
-      @font-face {
-        font-family: 'source_code_prolight';
-        src: url('sourcecodepro-light-webfont.woff2') format('woff2'),
-          url('sourcecodepro-light-webfont.woff') format('woff');
       }
 
       @font-face {
@@ -48,55 +37,34 @@
           url('sourcecodepro-regular-webfont.woff') format('woff');
       }
 
-      @font-face {
-        font-family: 'source_code_prosemibold';
-        src: url('sourcecodepro-semibold-webfont.woff2') format('woff2'),
-          url('sourcecodepro-semibold-webfont.woff') format('woff');
-      }
-
-      @font-face {
-        font-family: 'source_code_problack';
-        src: url('sourcecodepro-black-webfont.woff2') format('woff2'),
-          url('sourcecodepro-black-webfont.woff') format('woff');
-      }
-
-      @font-face {
-        font-family: 'source_code_probold';
-        src: url('sourcecodepro-bold-webfont.woff2') format('woff2'),
-          url('sourcecodepro-bold-webfont.woff') format('woff');
-      }
-
-      /* Layout styles */
       #container {
         display: flex;
         flex-direction: column;
         align-items: center;
         padding: 10px;
-        padding-top: 0;
-        padding-right: 0;
         max-width: 1200px;
-        margin: 0 auto;
+        min-width: 1150px;
+        margin: auto;
         min-height: 100vh;
         position: relative;
         background-color: white;
       }
 
       header {
+                font-family: 'source_code_proregular', sans-serif;
+
         display: flex;
         align-items: center;
-        margin-bottom: 0px;
         width: 100%;
-        height:300px;
-        background-color: white;
-        padding: 10px;
-        padding-bottom: 20px;
-        border-radius: 8px;
-        /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
-        /* background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1200 800"><path stroke="%23000000" d="M100 0 L0 300 H275 L375 0" fill="%23f4f4f4FF"/></svg>') no-repeat top right; */
+        height: 300px;
         background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1200 800"><path stroke="%23000000" d="M120 0 L30 175 Q-25 300 225 275  Q375 250 275 300 L375 0" fill="%233794ff22"/></svg>') no-repeat top right;
-
         background-size: cover;
         z-index: 1;
+      }
+
+      header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
       }
 
       .header-img {
@@ -105,14 +73,6 @@
         display: flex;
         justify-content: center;
       }
-
-      .mug-shot {
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-        object-fit: cover;
-      }
-
       .header-text {
         flex: 3;
         display: flex;
@@ -132,75 +92,44 @@
         text-align: left;
         margin-right: 0.5rem;
       }
+      .mug-shot {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
 
-      .header-right {
-        text-align: right;
-        margin-left: 0.5rem;
+      .header-text {
+        flex: 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        font-size: 4rem;
+        /* padding: 50px; */
       }
 
       main {
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 0px;
         width: 100%;
         position: relative;
         padding-right: 20px;
       }
-.row {
-  display: flex;
+ul .bolder-text {
+  font-weight: bold;
+}
+ul .bolder-text li,span {
+  font-weight: normal;
+}
+      .row {
+        display: flex;
         flex-direction: row;
         gap: 20px;
         width: 100%;
         position: relative;
         padding-right: 20px;
-        page-break-after: avoid;
-
-}
-      main::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: -1;
-      }
-
-      .sidebar {
-        min-width: 347px;
-        flex: 1;
-        background-color: #f4f4f4;
-        border-left: 1px solid #f0f0f0;
-        border-right: 1px solid #f0f0f0;
-      }
-
-      .sidebar section {
-        margin-bottom: 20px;
-      }
-
-      .skills li {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 10px;
-      }
-
-      .skills li progress {
-        width: 100%;
-        height: 10px;
-      }
-
-      .skills li progress::-webkit-progress-bar {
-        background-color: #f4f4f4;
-      }
-
-      .skills li progress::-webkit-progress-value {
-        background-color: #007BFF;
-      }
-
-      .content {
-        flex: 3;
       }
 
       ul {
@@ -208,26 +137,25 @@
         padding-left: 10px;
         padding-right: 10px;
       }
+
       ul.bullet {
         list-style-type: disc;
         padding-left: 10px;
         padding-right: 10px;
-        padding-bottom: 20px;
+        padding-bottom: 10px;
       }
-      ul li {
-        margin-bottom: 10px;
-      }
+
+
+
       ul.bullet li {
         margin: 0;
         padding: 0;
       }
-      /* Footer styles */
+
       footer {
         display: flex;
         justify-content: center;
         gap: 20px;
-        padding: 0;
-        /* background-color: #eae8e8; */
         width: 100%;
         position: absolute;
         bottom: 0;
@@ -235,87 +163,118 @@
 
       h3 {
         font-size: 1.5rem;
-        margin-bottom: 20px;
-        margin-top: 10px;
-       }
-       h4 {
-       text-decoration: underline;
-        margin: 10px;
-        font-size: 16px;
+        font-weight: normal;
+        text-decoration: underline;
+        margin: 5px 5px;
       }
+
+      h4 {
+        font-family: 'source_code_proregular', sans-serif;
+        margin: 0;
+        font-size: 12px;
+        padding-bottom: .1rem;
+      }
+
       .bigger-text {
-        font-size: 1.2em;
+        font-size: 1rem;
         margin: 1px;
+        padding: 0;
+        margin-top: 15px;
       }
-      /* Margin for job descriptions */
+      .bigger-text-no-margin {
+        font-size: 1rem;
+        margin: 1px;
+        padding: 0;
+        margin-top: 0px;
+      }
       .job-description {
-        margin-top: 5px;
-        margin-left: 5px;
-        display: block;
+        margin:0;
+        display: inline;
+        font-size: small;
       }
-      .fas, .fab{
+
+      .fas,
+      .fab {
         margin-right: 7px;
       }
-.contact {
- width: 25%;
-}
-.contact a {
-  text-decoration: none;
-  color: #3794ffFF;
-}
-.profiel {
- width: 75%;
-}
-      /* Print styles */
+
+      .contact {
+        width: fit-content;
+        float: right;
+            }
+
+      .contact a {
+        text-decoration: none;
+        color: #3794ffFF;
+      
+
+      }
+
+      .profiel {
+        width: 80%;
+      }
+      .quote {
+        padding: 15px;
+          font-style: italic;
+          font-size: 1.3rem;
+        }
       @media print {
-        @page {
-          margin: 1cm;
+        body, html {
           background-color: white;
+          padding: 0 1rem;
+        }
+        @page {
+          margin: 0;
+          background-color: white;
+        }
+        .quote {
+        padding: 10px 0 0 0;
+          font-style: italic;
+          font-size: 1.3rem;
         }
         h3 {
-          font-size: 1rem;
-          margin-bottom: 10px;
+          font-size: 1.5rem;
+          margin-bottom: 0px;
           margin-top: 10px;
-          margin-left: 0;
         }
+
         h4 {
-         text-decoration: none;
+          text-decoration: none;
+          padding: .5rem;
         }
-        .content {
-          width: 100%;
+        #container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 10px;
+        max-width: 100%;
+        min-width: 1150px;
+        margin: auto;
+        min-height: 100vh;
+        position: relative;
+        background-color: white;
+      }
+        .contact {
+          width: fit-content;
+          float: right;
         }
-        body,
-        html {
-          font-size: 12px;
-          /* smaller font size for print*/
-          background-color: white;
-        }
-        header,
-        footer {
-          position: static;
-          width: 100%;
-          page-break-after: avoid;
+
+        .profiel {
+          width: 80%;
         }
 
         header {
+          padding: 0;
+          margin: 0;
           top: 0;
           background: white;
           background-image: none;
           width: 100%;
-          height:300px;
-          overflow: auto;
-          /* background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1200 800"><path stroke="%23000000" d="M100 0 L0 300 H275 L375 0" fill="%23f4f4f4FF"/></svg>') no-repeat top right; */
+          height: 250px;
           background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 825 300"><path stroke="%23000000" d="M145 0 L55 175 Q-25 300 225 275  Q375 250 275 300 L375 0" fill="%233794ff22"/></svg>') no-repeat top right;
-          background-size: cover;
-          padding-bottom: 0;
-          margin-bottom: 0;
+          background-position: top left -25px;
         }
-        .contact {
-         width: 30%;
-        }
-        .profiel {
-        width: 70%;
-}
+
         footer {
           bottom: 0;
         }
@@ -324,31 +283,43 @@
           margin-top: 0px;
           margin-bottom: 0px;
           font-size: 12px;
-          /* smaller font size for print*/
           margin-left: 0;
           padding-left: 0;
         }
+
         .newpage {
           page-break-before: always;
           margin-top: 30px;
         }
-        header,
-        main,
-        .sidebar,
-        .content {
-          page-break-inside: avoid;
-        }
 
-        .content ul {
-          margin-top: 0;
+        header,
+        main {
+          page-break-inside: avoid;
         }
 
         .content ul li {
           margin-bottom: 5px;
         }
+        .job-description {
+        margin:0;
+        display: inline;
+        font-size: 1rem;
       }
-    </style>
-  </head>
+      ul .bolder-text {
+  font-weight: bold;
+  font-size: medium;
+}
+ul .bolder-text li,span {
+  font-weight: normal;
+  font-size: medium;
+}
+      }
+      h4 span {
+        font-weight: lighter;  
+        float:right;
+        font-size: medium;
+      }
+    </style>  </head>
   <body>
     <div id="container">
       <header>
@@ -363,16 +334,15 @@
       <main>
         <div class="row">
           <section class="profiel">
-            <h3>Profiel</h3>
-            <p>
-              Gemotiveerde certificeerde Medior Full-stack .NET developer met een
+            <p class="quote">
+              "Gepassioneerde certificeerde Medior Full-stack .NET developer met een
               pragmatische aanpak en hoog probleemoplossend vermogen, gecombineerd
               met een onrembare leergierigheid, steeds op de hoogte blijvend 
-              van de nieuwste trends en technologieën.
+              van de nieuwste trends en technologieën."
             </p>
           </section>
           <section class="contact">
-            <h3>Contact</h3>
+            <br />
             <p>
               <a href="tel:+32472247929"
                 ><i class="fas fa-phone-square-alt"></i>+32 472/247.929</a
@@ -398,111 +368,130 @@
           </div>
         <section class="content">
           <h3>Werkervaring</h3>
-          <h4 class="bigger-text">E2E(End to End Services)<span style="font-weight: lighter;">(11/24-12/24)</span></h4> 
+          <h4 class="bigger-text">E2E(End to End Services)<span>11/24-12/24</span></h4> 
           <ul>
-            <li>
-              <strong>Full-stack .NET developer</strong> (04/11/24-04/12/24):
+            <li class="bolder-text">
+              Full-Stack .NET Developer:
               <span class="job-description">in MVC ASP.NET, htmx, </span>
             </li>
-            </ul>
-            <h4 class="bigger-text">Dotnetlab(it4it Services)<span style="font-weight: lighter;">(06/22-10/24)</span></h4> 
+          </ul>
+            <h4 class="bigger-text">Dotnetlab(it4it Services)<span>06/22-10/24</span></h4> 
           <ul>
             <li>
-              <strong>Full-stack .NET developer</strong> (02/24-10/24):
-              <span class="job-description">frontend in Blazor, backend Blazor+API; DotnetLab Webscraper</span>
+              <span class="bolder-text">Internal projects as Full-stack .NET developer:</span>
+              <ul class="bullet">
+                <li>
+                  Create jobsite scraper:
+                  <span class="job-description">frontend in Blazor, backend Blazor+API</span>
+                </li>
+                <li>
+                  Set up a chatbot with selectable multiple LLMs running in container on Azure:
+                  <span class="job-description">frontend in Svelte, backend Sveltekit+.NET API</span>
+                </li>
+                <li>
+                  Update DotnetLab Cornucopia site:
+                  <span class="job-description">frontend in Svelte, backend Sveltekit</span>
+                </li>
+              </ul>
             </li>
-            <li>
-              <strong>Full-stack .NET developer</strong> (02/24-03/24):
-              <span class="job-description">frontend in Svelte, backend Sveltekit+.NET API; DotnetLab Chatbot with selectable Multiple LLMs running in container on azure</span>
-            </li>
-            <li>
-              <strong>Full-stack .NET developer</strong> (02/24-03/24):
-              <span class="job-description">frontend in Svelte, backend Sveltekit; DotnetLab Cornucopia site</span>
-            </li>
-            <li>
-              <strong>Full-stack .NET developer for CVO GO! Antwerpen</strong> (01/24-ongoing):
-              <span class="job-description">frontend in AngularJS, backend C# .NET; POC integratie PayWorld terminals</span>
-            </li>
-            <li>
-              <strong>Full-stack .NET developer for Hifferman/Stumabo via E-Trace</strong>
-              (06/23-12/23):
-              <span class="job-description">frontend in Angular2, backend .NET core; Ontwikkelen van onder andere Tijdsregistratie dashboard + de backend implementaties gebruikmakend van SAP api's ODATA en verschillende databases (Entitiy Framwork)</span>
-            </li>
-            <li>
-              <strong>Full-stack .NET developer at FWO</strong> (06/22-06/23):
-              <span class="job-description">frontend in Angular, SQL queries, backend C# .NET api's, werken met EF & Dapper ter ondersteuning van hun eloket (portal), angular dynamic forms (voor aanvragen van subsidies voor onderzoeken), omzetten oude MVC3 eloket portal naar Angular frontend met C# .Net API backend.</span>
-            </li>
+            <li class="bolder-text">
+              Client projects as Full-stack .NET developer:
+              <ul class="bullet">
+                <li>
+                  for CVO GO! Antwerpen:
+                  <span class="job-description">frontend in AngularJS, backend C# .NET; POC integratie PayWorld terminals</span>
+                </li>
+                <li>
+                  for Hifferman/Stumabo via E-Trace:
+                  <span class="job-description">frontend in Angular2, backend .NET core; Ontwikkelen van onder andere Tijdsregistratie dashboard + de backend implementaties gebruikmakend van SAP api's ODATA en verschillende databases (Entitiy Framwork)</span>
+                </li>
+                <li>
+                  for FWO:
+                  <span class="job-description">frontend in Angular, SQL queries, backend C# .NET api's, werken met EF & Dapper ter ondersteuning van hun eloket (portal), angular dynamic forms (voor aanvragen van subsidies voor onderzoeken), omzetten oude MVC3 eloket portal naar Angular frontend met C# .Net API backend.</span>
+                </li>
+              </ul>
+            </li>           
           </ul>
 
-          <h4 class="bigger-text">Integri Services<span style="font-weight: lighter;">(08/21-06/22)</span></h4>
+          <h4 class="bigger-text-no-margin">Integri Services<span>08/21-06/22</span></h4>
           <ul>
-            <li>
-              <strong>Backend .NET developer at Mediahuis</strong> (01/22-06/22):
+            <li class="bolder-text">
+                Backend .NET developer at Mediahuis:
               <span class="job-description">Opzetten allerhande API's, werken met verscheidene databasetypes aldaniet relationeel, rabbitMQ, microservices, docker containers, etc.</span>
             </li>
-          <li>
-            <strong>Vast Contract als Consultant</strong> (09/21-01/22):
+          <li class="bolder-text">
+              Vast Contract als Consultant:
             <span class="job-description">Intern project, maken van een login pagina (inloggend met AWS Cognito).</span>
           </li>
-            <li>
-              <strong>Stage</strong> (08/21):
+            <li class="bolder-text">
+                Stage:
               <span class="job-description">Als .NET ontwikkelaar met C# MVC omgeving, inleiding tot het intern project: Veeam Portal for scalable 365 Backups</span>
             </li>
           </ul>
-
-          <h4 class="bigger-text newpage">'t Kofschip/ eLiXir (Gent)</h4>
+          <h4 class="bigger-text">'t Kofschip/ eLiXir (Gent)<span>09/00-03/20</span></h4>
           <ul>
-            <li>
-              <strong>Diskjockey & Videojockey</strong> (09/00-03/20):
+            <li class="bolder-text">
+              Diskjockey & Videojockey:
               <span class="job-description">Disc-jockey bij ’t Kofschip/ eLiXir te Gent tot maart 2020 (covid-19).</span>
             </li>
           </ul>
-
-          <h4 class="bigger-text">UUnet/ World-Online/ Tiscali</h4>
+          <h4 class="bigger-text">UUnet/ World-Online/ Tiscali<span>07/98-09/00</span></h4>
           <ul>
-            <li>
-              <strong>B2B-helpdesk medewerker</strong> (07/98-07/00):
+            <li class="bolder-text">
+              B2B-helpdesk medewerker:
               <span class="job-description">Helpdesk medewerker bij UUnet/ World-Online/ Tiscali</span>
             </li>
           </ul>
-          <h4 class="bigger-text">Ministerie van Landsverdediging</h4>
+          <h4 class="bigger-text">Ministerie van Landsverdediging<span>06/93-06/95</span></h4>
           <ul>
-            <li>
-              <strong>Storm fuselier</strong> (06/93-06/95):
+            <li class="bolder-text">
+              Storm fuselier:
               <span class="job-description">2 Jaar Ministerie van Landsverdediging. Ik was niet meer dienstplichtig, doch wenste mezelf te testen wat betreft discipline.</span>
             </li>
           </ul>
-          <br />
+
           <h3>Opleidingen</h3>
           <ul>
+            <h4 class="bigger-text">Microsoft Certified: Azure Developer Associate (AZ-204)<span>(01/24) (recent vernieuwd voor 2025)</span></h4> 
             <li>
-              <strong>Microsoft Certified: Azure Developer Associate (AZ-204)</strong>
-              (01/24): Build end-to-end solutions in Microsoft Azure to create
-              Azure Functions, implement and manage web apps, develop solutions
-              utilizing Azure storage, and more.
+              <span class="job-description"> Build end-to-end solutions in Microsoft Azure to create
+                Azure Functions, implement and manage web apps, develop solutions
+                utilizing Azure storage, and more.</span>
+            </li>
+            <h4 class="bigger-text-no-margin">Stage at Integri Services:</h4> 
+            <li>
+              <span class="job-description">              Als .NET ontwikkelaar
+                met C# MVC omgeving, inleiding tot het intern project: Veeam Portal for
+                scalable 365 Backups.</span>
+            </li>
+            <h4 class="bigger-text-no-margin">Cursus .NET ontwikkelaar met C#:</h4> 
+            <li>
+              <span class="job-description">.NET ontwikkelaar
+                met C# (omvat maar niet beperkt tot: SQL, Entity Framework, WPF, XML,
+                Xamarin, JSON, SCRUM, AGILE, Angular, Typscript, ASP.NET,…)</span>
             </li>
             <li>
-              <strong>Stage at Integri Services</strong> (08/21): Als .NET ontwikkelaar
-              met C# MVC omgeving, inleiding tot het intern project: Veeam Portal for
-              scalable 365 Backups
-            </li>
-            <li>
-              <strong>Cursus .NET ontwikkelaar met C#</strong> (2020-2021): .NET ontwikkelaar
-              met C# (omvat maar niet beperkt tot: SQL, Entity Framework, WPF, XML,
-              Xamarin, JSON, SCRUM, AGILE, Angular, Typscript, ASP.NET,…)
-            </li>
-            <li>
-              <strong>Inleiding tot PHP</strong> (2020): Inleiding tot PHP (VDAB
+              <h4 class="bigger-text-no-margin">
+                Inleiding tot PHP: 
+              </h4>
+              <span class="job-description">
+             Inleiding tot PHP (VDAB
               online via zelfstudie), PHP en databanken, Webdesign - Stylesheets in
               CSS3, Websites ontwerpen met HTML 5, Programmatie logica, ICT 4U: Deel1:
               Web-development
+              </span>
             </li>
             <li>
-              <strong>PC-technicus met kennis van netwerken</strong> (1999):
+              <h4 class="bigger-text-no-margin">
+
+                PC-technicus met kennis van netwerken:
+              </h4>
               PC-technicus met kennis van netwerken (VDAB) gecertificeerd PC technicus
             </li>
             <li>
-              <strong>PC Technicus en Elektronica vooropleiding</strong> (1998):
+              <h4 class="bigger-text-no-margin">
+                PC Technicus en Elektronica vooropleiding:
+              </h4 >
               Basis elektriciteit, basis elektronica, Assemblage pc, besturingssystemen,
               Netwerking, basis active directory
             </li>
@@ -510,47 +499,42 @@
         </section>
           <section>
           <h3>Belangrijkste Vaardigheden en Kenmerken</h3>
-          
-          <h4>Languages & Frameworks:</h4>
-          <p>
+          <ul>
+
+            <li class="bolder-text">Languages & Frameworks:</li>
+            <p>
               C# .NET Core/Framework, MAUI (Xamarin), Blazor, Web API, Linq, HTML5/CSS3, 
               Bootstrap, Javascript/ECMAScript, Angular/AngularJS, PrimeNG, Typescript, UWP, WPF
-          </p>
-      
-          <h4>Principles & Methodologies:</h4>
-          <p>
+            </p>
+            
+            <li class="bolder-text">Principles & Methodologies:</li>
+            <p>
               SOLID/YAGNI/KISS, Agile/Scrum/Kanban, DevOps, CQRS/Mediatr
-          </p>
-      
-          <h4>Tools & Technologies:</h4>
-          <p>
+            </p>
+            
+            <li class="bolder-text">Tools & Technologies:</li>
+            <p>
               Git/Github, Atlassian (Jira/Confluence), Azure Service Bus, AWS SQS/SNS, RabbitMQ, 
               ElasticSearch, Microservices, Docker/Kubernetes, CLI (CMD/Powershell/Linux Bash), 
               Databases (SQL, MySQL, CosmosDB, MongoDB, DynamoDb), Dapper/Entity Framework, 
               Azure CI/CD Pipelines, DevExpress
-          </p>
-      
-          <h4>Testing:</h4>
-          <p>
+            </p>
+            
+            <li class="bolder-text">Testing:</li>
+            <p>
               Unit Testing (NUnit, xUnit), E2E Testing (Playwright, Selenium)
-          </p>            
-            <h4>Andere</h4>
+            </p>            
+            <li class="bolder-text">Andere</li>
             <p>
-              30jaar Horeca: diplomatisch, moeilijke klanten ervaring, assertief
-            </p>
-            <p>
+              diplomatisch, ervaring met moeilijke klanten(30+ jaar Horeca), assertief, stresbestendig,
               Probleemoplossend vermogen, analytisch en logisch (Bèta-tester
-              sinds 1999)
-            </p>
-            <p>Efficiënt, Empathisch waar nodig. Hoog aanpassingsvermogen.</p>
+              sinds 1999), Efficiënt, Empathisch waar nodig. Hoog aanpassingsvermogen.</p>
+          </ul>
          <h3>Interesses</h3>
          <ul class="bullet">
-           <li>Disk jockey (Allround)</li>
-           <li>IT (zo wat alles IT gerelateerd: Assemblage, Netwerken, Development,...)</li>
-           <li>PC troubleshooter</li>
-           <li>Web design (HTML5, PHP, JS, CSS3)</li>
-           <li>Alpha/Beta Tester</li>
-           <li>Volgen van technologische updates documentatie/nieuws</li>
+           ICT (zo wat alles IT gerelateerd: Assemblage, Netwerken, Development,...), PC troubleshooter, 
+           Web design (HTML5, PHP, JS, CSS3), Alpha/Beta Tester dj software, Disk jockey (Allround),
+           Volgen van technologische updates documentatie/nieuws</p>
          </ul>
        </section>
       </main>
