@@ -33,15 +33,15 @@
 
       @font-face {
         font-family: 'source_code_proregular';
-        src: url('sourcecodepro-regular-webfont.woff2') format('woff2'),
-          url('sourcecodepro-regular-webfont.woff') format('woff');
+        src: url('sourcecodepro-light-webfont.woff2') format('woff2'),
+          url('sourcecodepro-light-webfont.woff') format('woff');
       }
 
       #container {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 10px;
+        padding: 0 10px;
         max-width: 1200px;
         min-width: 1150px;
         margin: auto;
@@ -49,7 +49,9 @@
         position: relative;
         background-color: white;
       }
-
+.content {
+  width: 100%;
+}
       header {
                 font-family: 'source_code_proregular', sans-serif;
 
@@ -57,14 +59,13 @@
         align-items: center;
         width: 100%;
         height: 300px;
-        background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1200 800"><path stroke="%23000000" d="M120 0 L30 175 Q-25 300 225 275  Q375 250 275 300 L375 0" fill="%233794ff22"/></svg>') no-repeat top right;
+        background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1200 800"><path stroke="%23000000" d="M95 0 L50 125 A100 100 -15 0 0 300 185 L350 0" fill="%23ff9900CC"/></svg>') no-repeat top right;
         background-size: cover;
         z-index: 1;
       }
 
       header h1 {
         font-size: 2.5rem;
-        margin-bottom: 10px;
       }
 
       .header-img {
@@ -73,24 +74,30 @@
         display: flex;
         justify-content: center;
       }
+
       .header-text {
         flex: 3;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: justify;
         text-align: center;
         font-size: 4rem;
         padding: 50px;
       }
-
       .header-left,
       .header-right {
-        width: 100%;
+        padding: 0;
+        margin: 0;
       }
+.header-right {
+  width: 70%;
 
+        text-align: right;
+      }
       .header-left {
+        width: 100%;
         text-align: left;
-        margin-right: 0.5rem;
+        padding-right: 10rem;
       }
       .mug-shot {
         width: 200px;
@@ -98,17 +105,6 @@
         border-radius: 50%;
         object-fit: cover;
       }
-
-      .header-text {
-        flex: 3;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        font-size: 4rem;
-        /* padding: 50px; */
-      }
-
       main {
         display: flex;
         flex-direction: column;
@@ -117,11 +113,19 @@
         position: relative;
         padding-right: 20px;
       }
-ul .bolder-text {
+ul {
+  margin-left: 10px;
   font-weight: bold;
+  padding: 0;
+  margin-right: 10rem;
 }
-ul .bolder-text li,span {
+ul li {
   font-weight: normal;
+  margin-left: 10px;
+}
+span {
+  font-weight: 300;
+  font-size: small;
 }
       .row {
         display: flex;
@@ -134,19 +138,15 @@ ul .bolder-text li,span {
 
       ul {
         list-style-type: none;
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-left: 0px;
+        padding-right: 0px;
       }
 
-      ul.bullet {
-        list-style-type: disc;
-        padding-left: 10px;
+      p.bullet {
+        padding-left: 1rem;
         padding-right: 10px;
         padding-bottom: 10px;
       }
-
-
-
       ul.bullet li {
         margin: 0;
         padding: 0;
@@ -165,39 +165,22 @@ ul .bolder-text li,span {
         font-size: 1.5rem;
         font-weight: normal;
         text-decoration: underline;
-        margin: 5px 5px;
+        margin: 10px;
       }
 
       h4 {
-        font-family: 'source_code_proregular', sans-serif;
         margin: 0;
-        font-size: 12px;
-        padding-bottom: .1rem;
-      }
-
-      .bigger-text {
+        margin-left: 20px;
         font-size: 1rem;
-        margin: 1px;
-        padding: 0;
-        margin-top: 15px;
+        padding-bottom: .2rem;
       }
-      .bigger-text-no-margin {
-        font-size: 1rem;
-        margin: 1px;
-        padding: 0;
-        margin-top: 0px;
+      ul h4 {
+        margin-left: 10px;
       }
-      .job-description {
-        margin:0;
-        display: inline;
-        font-size: small;
-      }
-
       .fas,
       .fab {
         margin-right: 7px;
       }
-
       .contact {
         width: fit-content;
         float: right;
@@ -206,8 +189,6 @@ ul .bolder-text li,span {
       .contact a {
         text-decoration: none;
         color: #3794ffFF;
-      
-
       }
 
       .profiel {
@@ -216,108 +197,28 @@ ul .bolder-text li,span {
       .quote {
         padding: 15px;
           font-style: italic;
-          font-size: 1.3rem;
+          font-size: 1.49rem;
+        }
+        h4 span {
+          font-weight: lighter;  
+          float:right;
+          margin: 0;
+          padding: 0;
+          font-size: medium;
         }
       @media print {
-        body, html {
+        body,html {
           background-color: white;
-          padding: 0 1rem;
         }
-        @page {
-          margin: 0;
-          background-color: white;
+        footer {
+          display: none;
         }
         .quote {
-        padding: 10px 0 0 0;
+        padding: 15px 0;
           font-style: italic;
-          font-size: 1.3rem;
-        }
-        h3 {
-          font-size: 1.5rem;
-          margin-bottom: 0px;
-          margin-top: 10px;
+          font-size: 1.4rem;
         }
 
-        h4 {
-          text-decoration: none;
-          padding: .5rem;
-        }
-        #container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 0 10px;
-        max-width: 100%;
-        min-width: 1150px;
-        margin: auto;
-        min-height: 100vh;
-        position: relative;
-        background-color: white;
-      }
-        .contact {
-          width: fit-content;
-          float: right;
-        }
-
-        .profiel {
-          width: 80%;
-        }
-
-        header {
-          padding: 0;
-          margin: 0;
-          top: 0;
-          background: white;
-          background-image: none;
-          width: 100%;
-          height: 250px;
-          background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 825 300"><path stroke="%23000000" d="M145 0 L55 175 Q-25 300 225 275  Q375 250 275 300 L375 0" fill="%233794ff22"/></svg>') no-repeat top right;
-          background-position: top left -25px;
-        }
-
-        footer {
-          bottom: 0;
-        }
-
-        main {
-          margin-top: 0px;
-          margin-bottom: 0px;
-          font-size: 12px;
-          margin-left: 0;
-          padding-left: 0;
-        }
-
-        .newpage {
-          page-break-before: always;
-          margin-top: 30px;
-        }
-
-        header,
-        main {
-          page-break-inside: avoid;
-        }
-
-        .content ul li {
-          margin-bottom: 5px;
-        }
-        .job-description {
-        margin:0;
-        display: inline;
-        font-size: 1rem;
-      }
-      ul .bolder-text {
-  font-weight: bold;
-  font-size: medium;
-}
-ul .bolder-text li,span {
-  font-weight: normal;
-  font-size: medium;
-}
-      }
-      h4 span {
-        font-weight: lighter;  
-        float:right;
-        font-size: medium;
       }
     </style>  </head>
   <body>
@@ -368,174 +269,179 @@ ul .bolder-text li,span {
           </div>
         <section class="content">
           <h3>Werkervaring</h3>
-          <h4 class="bigger-text">E2E(End to End Services)<span>11/24-12/24</span></h4> 
+          <h4 >E2E(End to End Services)<span>11/24-12/24</span></h4> 
           <ul>
-            <li class="bolder-text">
+            <li >
               Full-Stack .NET Developer:
-              <span class="job-description">in MVC ASP.NET, htmx, </span>
+              <span >in MVC ASP.NET, htmx, </span>
             </li>
           </ul>
-            <h4 class="bigger-text">Dotnetlab(it4it Services)<span>06/22-10/24</span></h4> 
+            <h4 >Dotnetlab(it4it Services)<span>06/22-10/24</span></h4> 
           <ul>
             <li>
-              <span class="bolder-text">Internal projects as Full-stack .NET developer:</span>
+              <b>→ Internal projects as Full-stack .NET developer:</b>
               <ul class="bullet">
                 <li>
                   Create jobsite scraper:
-                  <span class="job-description">frontend in Blazor, backend Blazor+API</span>
+                  <span > Blazor web app + API</span>
                 </li>
                 <li>
                   Set up a chatbot with selectable multiple LLMs running in container on Azure:
-                  <span class="job-description">frontend in Svelte, backend Sveltekit+.NET API</span>
+                  <span >Svelte, Sveltekit +.NET API</span>
                 </li>
                 <li>
                   Update DotnetLab Cornucopia site:
-                  <span class="job-description">frontend in Svelte, backend Sveltekit</span>
+                  <span >Svelte, Sveltekit</span>
                 </li>
               </ul>
             </li>
-            <li class="bolder-text">
-              Client projects as Full-stack .NET developer:
+            <li >
+              <b>→ Client projects as Full-stack .NET developer:</b>
               <ul class="bullet">
                 <li>
-                  for CVO GO! Antwerpen:
-                  <span class="job-description">frontend in AngularJS, backend C# .NET; POC integratie PayWorld terminals</span>
+                  CVO GO! Antwerpen:
+                  <span >AngularJS, C# .NET; POC integratie PayWorld terminals</span>
                 </li>
                 <li>
-                  for Hifferman/Stumabo via E-Trace:
-                  <span class="job-description">frontend in Angular2, backend .NET core; Ontwikkelen van onder andere Tijdsregistratie dashboard + de backend implementaties gebruikmakend van SAP api's ODATA en verschillende databases (Entitiy Framwork)</span>
+                  Hifferman/Stumabo via E-Trace:
+                  <span >Angular2, .NET core; Ontwikkelen van onder andere Tijdsregistratie dashboard + de backend implementaties gebruikmakend van SAP api's ODATA en verschillende databases (Entitiy Framwork)</span>
                 </li>
-                <li>
-                  for FWO:
-                  <span class="job-description">frontend in Angular, SQL queries, backend C# .NET api's, werken met EF & Dapper ter ondersteuning van hun eloket (portal), angular dynamic forms (voor aanvragen van subsidies voor onderzoeken), omzetten oude MVC3 eloket portal naar Angular frontend met C# .Net API backend.</span>
+                <li>FWO:
+                  <span >Angular2, SQL queries, backend C# .NET api's, werken met EF & Dapper ter ondersteuning van hun eloket (portal), angular dynamic forms (aanvragen van subsidies voor onderzoeken), omzetten oude MVC3 eloket portal naar Angular frontend met C# .Net API backend.</span>
                 </li>
               </ul>
             </li>           
           </ul>
 
-          <h4 class="bigger-text-no-margin">Integri Services<span>08/21-06/22</span></h4>
+          <h4 >Integri Services<span>08/21-06/22</span></h4>
           <ul>
-            <li class="bolder-text">
+            <li >
                 Backend .NET developer at Mediahuis:
-              <span class="job-description">Opzetten allerhande API's, werken met verscheidene databasetypes aldaniet relationeel, rabbitMQ, microservices, docker containers, etc.</span>
+              <span >Opzetten allerhande API's, Atom/Rss feeds, werken met verscheidene databasetypes aldaniet relationeel, rabbitMQ, microservices, docker containers, etc.</span>
             </li>
-          <li class="bolder-text">
+          <li >
               Vast Contract als Consultant:
-            <span class="job-description">Intern project, maken van een login pagina (inloggend met AWS Cognito).</span>
+            <span >Intern project, maken van een login pagina (inloggend met AWS Cognito).</span>
           </li>
-            <li class="bolder-text">
+            <li >
                 Stage:
-              <span class="job-description">Als .NET ontwikkelaar met C# MVC omgeving, inleiding tot het intern project: Veeam Portal for scalable 365 Backups</span>
+              <span >Als .NET ontwikkelaar met C# MVC omgeving, inleiding tot het intern project: Veeam Portal for scalable 365 Backups</span>
             </li>
           </ul>
-          <h4 class="bigger-text">'t Kofschip/ eLiXir (Gent)<span>09/00-03/20</span></h4>
+          <h4 >'t Kofschip/ eLiXir (Gent)<span>09/00-03/20</span></h4>
           <ul>
-            <li class="bolder-text">
+            <li >
               Diskjockey & Videojockey:
-              <span class="job-description">Disc-jockey bij ’t Kofschip/ eLiXir te Gent tot maart 2020 (covid-19).</span>
+              <span >Disc-jockey bij ’t Kofschip/ eLiXir te Gent tot maart 2020 (beëindigd door covid-19).</span>
             </li>
           </ul>
-          <h4 class="bigger-text">UUnet/ World-Online/ Tiscali<span>07/98-09/00</span></h4>
+          <h4 >UUnet/ World-Online/ Tiscali<span>07/98-09/00</span></h4>
           <ul>
-            <li class="bolder-text">
+            <li >
               B2B-helpdesk medewerker:
-              <span class="job-description">Helpdesk medewerker bij UUnet/ World-Online/ Tiscali</span>
+              <span >Helpdesk medewerker bij UUnet/ World-Online/ Tiscali</span>
             </li>
           </ul>
-          <h4 class="bigger-text">Ministerie van Landsverdediging<span>06/93-06/95</span></h4>
+          <h4 >Ministerie van Landsverdediging<span>06/93-06/95</span></h4>
           <ul>
-            <li class="bolder-text">
+            <li >
               Storm fuselier:
-              <span class="job-description">2 Jaar Ministerie van Landsverdediging. Ik was niet meer dienstplichtig, doch wenste mezelf te testen wat betreft discipline.</span>
+              <span >2 Jaar Ministerie van Landsverdediging. Ik was niet meer dienstplichtig, doch wenste mezelf te testen wat betreft discipline.</span>
             </li>
           </ul>
 
           <h3>Opleidingen</h3>
+          <h4 >Microsoft Certified: Azure Developer Associate (AZ-204)<span>(01/24) recent vernieuwd voor 2025</span></h4> 
           <ul>
-            <h4 class="bigger-text">Microsoft Certified: Azure Developer Associate (AZ-204)<span>(01/24) (recent vernieuwd voor 2025)</span></h4> 
             <li>
-              <span class="job-description"> Build end-to-end solutions in Microsoft Azure to create
+              <span > Build end-to-end solutions in Microsoft Azure to create
                 Azure Functions, implement and manage web apps, develop solutions
                 utilizing Azure storage, and more.</span>
             </li>
-            <h4 class="bigger-text-no-margin">Stage at Integri Services:</h4> 
+            <h4 >Stage at Integri Services:</h4> 
             <li>
-              <span class="job-description">              Als .NET ontwikkelaar
-                met C# MVC omgeving, inleiding tot het intern project: Veeam Portal for
+              <span >Inleiding tot het intern project: Veeam Portal for
                 scalable 365 Backups.</span>
             </li>
-            <h4 class="bigger-text-no-margin">Cursus .NET ontwikkelaar met C#:</h4> 
+            <h4 >Cursus .NET ontwikkelaar met C#:</h4> 
             <li>
-              <span class="job-description">.NET ontwikkelaar
+              <span >.NET ontwikkelaar
                 met C# (omvat maar niet beperkt tot: SQL, Entity Framework, WPF, XML,
                 Xamarin, JSON, SCRUM, AGILE, Angular, Typscript, ASP.NET,…)</span>
             </li>
+            <h4 >
+              Inleiding tot PHP: 
+            </h4>
             <li>
-              <h4 class="bigger-text-no-margin">
-                Inleiding tot PHP: 
-              </h4>
-              <span class="job-description">
+              <span >
              Inleiding tot PHP (VDAB
               online via zelfstudie), PHP en databanken, Webdesign - Stylesheets in
               CSS3, Websites ontwerpen met HTML 5, Programmatie logica, ICT 4U: Deel1:
               Web-development
               </span>
             </li>
+            <h4 >
+              PC-technicus met kennis van netwerken:
+            </h4>
             <li>
-              <h4 class="bigger-text-no-margin">
-
-                PC-technicus met kennis van netwerken:
-              </h4>
-              PC-technicus met kennis van netwerken (VDAB) gecertificeerd PC technicus
+              <span >
+                PC-technicus met kennis van netwerken (VDAB) gecertificeerd PC technicus
+              </span>
             </li>
+            <h4 >
+              PC Technicus en Elektronica vooropleiding:
+            </h4 >
             <li>
-              <h4 class="bigger-text-no-margin">
-                PC Technicus en Elektronica vooropleiding:
-              </h4 >
-              Basis elektriciteit, basis elektronica, Assemblage pc, besturingssystemen,
+              <span >
+                Basis elektriciteit, basis elektronica, Assemblage pc, besturingssystemen,
               Netwerking, basis active directory
-            </li>
+            </span>
+          </li>
           </ul>
-        </section>
-          <section>
+
           <h3>Belangrijkste Vaardigheden en Kenmerken</h3>
           <ul>
 
-            <li class="bolder-text">Languages & Frameworks:</li>
-            <p>
-              C# .NET Core/Framework, MAUI (Xamarin), Blazor, Web API, Linq, HTML5/CSS3, 
-              Bootstrap, Javascript/ECMAScript, Angular/AngularJS, PrimeNG, Typescript, UWP, WPF
-            </p>
+            <li >Languages & Frameworks:
+              <span >
+                C# .NET Core/Framework, MAUI (Xamarin), Blazor, Web API, Linq, HTML5/CSS3, 
+                Bootstrap, Javascript/ECMAScript, Angular/AngularJS, PrimeNG, Typescript, UWP, WPF
+              </span>
+            </li>
+              
+            <li >Principles & Methodologies:
+              <span >
+                SOLID/YAGNI/KISS, Agile/Scrum/Kanban, DevOps, CQRS/Mediatr
+              </span>
+            </li>
             
-            <li class="bolder-text">Principles & Methodologies:</li>
-            <p>
-              SOLID/YAGNI/KISS, Agile/Scrum/Kanban, DevOps, CQRS/Mediatr
-            </p>
+            <li >Tools & Technologies:
+              <span >
+                Git/Github, Atlassian (Jira/Confluence), Azure Service Bus, AWS SQS/SNS, RabbitMQ, 
+                ElasticSearch, Microservices, Docker/Kubernetes, CLI (CMD/Powershell/Linux Bash), 
+                Databases (SQL, MySQL, CosmosDB, MongoDB, DynamoDb), Dapper/Entity Framework, 
+                Azure CI/CD Pipelines, DevExpress
+              </span>
+            </li>
             
-            <li class="bolder-text">Tools & Technologies:</li>
-            <p>
-              Git/Github, Atlassian (Jira/Confluence), Azure Service Bus, AWS SQS/SNS, RabbitMQ, 
-              ElasticSearch, Microservices, Docker/Kubernetes, CLI (CMD/Powershell/Linux Bash), 
-              Databases (SQL, MySQL, CosmosDB, MongoDB, DynamoDb), Dapper/Entity Framework, 
-              Azure CI/CD Pipelines, DevExpress
-            </p>
-            
-            <li class="bolder-text">Testing:</li>
-            <p>
-              Unit Testing (NUnit, xUnit), E2E Testing (Playwright, Selenium)
-            </p>            
-            <li class="bolder-text">Andere</li>
-            <p>
-              diplomatisch, ervaring met moeilijke klanten(30+ jaar Horeca), assertief, stresbestendig,
-              Probleemoplossend vermogen, analytisch en logisch (Bèta-tester
-              sinds 1999), Efficiënt, Empathisch waar nodig. Hoog aanpassingsvermogen.</p>
+            <li >Testing:
+              <span >
+                Unit Testing (NUnit, xUnit, bUnit), E2E Testing (Playwright, Selenium, Puppeteer)
+              </span>            
+            </li>
+            <li >Andere:
+
+              <span >
+                diplomatisch, ervaring met moeilijke klanten(30+ jaar Horeca), assertief, stresbestendig,
+                Probleemoplossend vermogen, analytisch en logisch (Bèta-tester
+                sinds 1999), Efficiënt, Empathisch waar nodig. Hoog aanpassingsvermogen.</span>
+              </li>
           </ul>
          <h3>Interesses</h3>
-         <ul class="bullet">
+         <p class="bullet">
            ICT (zo wat alles IT gerelateerd: Assemblage, Netwerken, Development,...), PC troubleshooter, 
            Web design (HTML5, PHP, JS, CSS3), Alpha/Beta Tester dj software, Disk jockey (Allround),
            Volgen van technologische updates documentatie/nieuws</p>
-         </ul>
        </section>
       </main>
       <footer>
