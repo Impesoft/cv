@@ -1,451 +1,322 @@
 <!DOCTYPE html>
-<html lang="nl-BE">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ward Impe's Curriculum Vitae</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
-      crossorigin="anonymous"
-    />
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      body,
-      html {
-        /* font-family: 'source_code_proregular', sans-serif; */
-        font-family: "Roboto", serif;
-        font-weight: 300;
-        font-style: normal;
-        font-size: 16px;
-        color: #333;
-        height: 100%;
-        background-color: black;
-      }
-
-      @font-face {
-        font-family: 'source_code_proregular';
-        src: url('sourcecodepro-light-webfont.woff2') format('woff2'),
-          url('sourcecodepro-light-webfont.woff') format('woff');
-      }
-
-      #container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 0 10px;
-        max-width: 1200px;
-        min-width: 1150px;
-        margin: auto;
-        min-height: 100vh;
-        position: relative;
-        background-color: white;
-      }
-.content {
-  width: 100%;
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ward Impe - Curriculum Vitae</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+  integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+  crossorigin="anonymous"
+/>
+<style>
+  @font-face {
+  font-family: 'source_code_proregular';
+  src: url('sourcecodepro-light-webfont.woff2') format('woff2'),
+    url('sourcecodepro-light-webfont.woff') format('woff');
 }
-      header {
-                font-family: 'source_code_proregular', sans-serif;
-
-        display: flex;
-        align-items: center;
-        width: 100%;
-        height: 300px;
-        background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1200 800"><path stroke="%23000000" d="M95 0 L50 125 A100 100 -15 0 0 300 185 L350 0" fill="%23ff9900CC"/></svg>') no-repeat top right;
-        background-size: cover;
-        z-index: 1;
-      }
-
-      header h1 {
-        font-size: 2.5rem;
-      }
-
-      .header-img {
-        padding: 0px 20px 0px 50px;
-        flex: 1;
-        display: flex;
-        justify-content: center;
-      }
-
-      .header-text {
-        flex: 3;
-        display: flex;
-        flex-direction: column;
-        justify-content: justify;
-        text-align: center;
-        font-size: 4rem;
-        padding: 50px;
-      }
-      .header-left,
-      .header-right {
-        padding: 0;
-        margin: 0;
-      }
-.header-right {
-  width: 70%;
-
-        text-align: right;
-      }
-      .header-left {
-        width: 100%;
-        text-align: left;
-        padding-right: 10rem;
-      }
-      .mug-shot {
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-        object-fit: cover;
-      }
-      main {
-        display: flex;
-        flex-direction: column;
-        gap: 0px;
-        width: 100%;
-        position: relative;
-        padding-right: 20px;
-      }
+body {
+font-family: 'Roboto', sans-serif;
+margin: 0;
+background-color: white;
+color: #333;
+line-height: 1.6;
+}
+header {
+font-family: 'source_code_proregular', sans-serif;
+margin: auto;
+max-width: 1200px;
+background-color: #ff9900;
+color: white;
+padding: 0 0 0 0;
+text-align: center;
+background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1200 800"><path stroke="%23000000" d="M65 0 L20 125 H1130 L1180 0" fill="%23ff9900CC"/></svg>') no-repeat top right;
+background-size: cover;
+}
+header h1 {
+margin: 0;
+font-size: 2.5rem;
+}
+header p {
+margin: 5px 0 0;
+font-size: 1.2rem;
+}
+.container {
+top: 0;
+clear: both;
+max-width: 1200px;
+margin: 20px auto;
+background: white;
+padding: 0 20px;
+border-radius: 10px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+display: grid;
+grid-template-columns: 3fr 1fr;
+gap: 20px;
+}
+section {
+margin-bottom: 0;
+}
+section h2 {
+margin-bottom: 0;
+font-size: 1.5rem;
+border-bottom: 2px solid #ff9900;
+padding-bottom: 5px;
+}
 ul {
-  margin-left: 10px;
-  font-weight: bold;
-  padding: 0;
-  margin-right: 10rem;
+list-style-type: none;
+padding: 0;
 }
 ul li {
-  font-weight: normal;
-  margin-left: 10px;
+margin: 5px 0;
 }
-span {
+.skills {
+display: flex;
+flex-wrap: wrap;
+grid-column-gap: 15px;
+}
+.skills div div{
+background-color: #f4f4f4;
+padding: 10px 15px;
+border-radius: 5px;
+box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+margin-bottom: 15px;
+}
+.contact a {
+color: #ff9900;
+text-decoration: none;
+}
+.contact a:hover {
+text-decoration: underline;
+}
+footer {
+grid-column: 1 / -1;
+text-align: center;
+margin-top: 20px;
+font-size: 0.9rem;
+color: #666;
+}
+.header-img {
+float: left;
+  padding: 0px 0px 0px 70px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.mug-shot {
+ margin:20px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.header-left,
+.header-right {
+ font-size: 2.5rem;
+ padding: 0;
+  margin: 0;
+}
+.header-right {
+  width: 70%;
+  text-align: right;
+}
+.header-left {
+width: 100%;
+text-align: left;
+padding-right: 10rem;
+}
+.header-middle {
+ font-family: 'Roboto', sans-serif;
+
+ width: 70%;
+ color: #000;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0;
+  text-align: center;
+}
+.header-text {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: justify;
+  text-align: center;
+  font-size: 4rem;
+  padding: 0 0 0 50px;
+}
+.fas,
+.fab {
+ font-size: large;
+  margin-right: 7px;
+}
+.summary {
+  font-size: 1.5rem;
   font-weight: 300;
-  font-size: small;
+  font-style: italic;
 }
-      .row {
-        display: flex;
-        flex-direction: row;
-        gap: 20px;
-        width: 100%;
-        position: relative;
-        padding-right: 20px;
-      }
+@media print {
+  body {
+    font-size: small;
+    line-height: 1;
+  }
+  .container {
+top: 0;
+clear: both;
+max-width: 1200px;
+margin: 20px auto;
+background: white;
+padding: 0 20px;
+border-radius: 10px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+display: grid;
+grid-template-columns: 5fr 2fr;
+gap: 20px;
+}
+  .header-left{
+margin: 25px 0 0 0;
+          }
+header {
+ height: 200px;
+ font-size: 2.5rem;
+ padding: 0;
+  margin: 0;
+  background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1200 200"><path stroke="%23000000" d="M65 0 L0 175 H1130 L1200 0 H65" fill="%23ff9900CC"/></svg>') no-repeat top right;
 
-      ul {
-        list-style-type: none;
-        padding-left: 0px;
-        padding-right: 0px;
-      }
+}
+  header h1 {
+margin: 0;
+font-size: 1.5rem;
+}
+header p {
+margin: 5px 0 0;
+font-size: .8rem;
+}
+section h2 {
+margin-bottom: 0;
+font-size: 1.2rem;
+border-bottom: 2px solid #ff9900;
+padding-bottom: 5px;
+}
+footer {
+display: none;
+}
+section {
+margin-bottom: 0;
+}
+.header-middle {
+ font-family: 'Roboto', sans-serif;
 
-      p.bullet {
-        padding-left: 1rem;
-        padding-right: 10px;
-        padding-bottom: 10px;
-      }
-      ul.bullet li {
-        margin: 0;
-        padding: 0;
-      }
+ width: 70%;
+ color: #000;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 50px 0 0 0;
+  text-align: center;
+}
 
-      footer {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        width: 100%;
-        position: absolute;
-        bottom: 0;
-      }
+.summary {
+  font-size: 1.3rem;
+  font-weight: 300;
+  font-style: italic;
+}
+}
+</style>
+</head>
+<body>
+  <header>
+   <div class="header-img">
+    <img class="mug-shot" src="Ward_Impe.jpg" alt="Ward Impe's Photo" />
+  </div>
+  <div class="header-text">
+    <div class="header-left">&lt;WARD</div>
+    <div class="header-right">IMPE/&gt;</div>
+    <div class="header-middle">Medior Full-Stack .NET Developer</div>
+  </div>
+  </header>
+  <div class="container">
+    <section class="summary">
+      <h2>Professional Summary</h2>
+      <p>Passionate and certified Medior Full-Stack .NET developer with a pragmatic approach and strong problem-solving abilities. Skilled in Blazor, .NET Core, and modern web technologies, with extensive experience in team collaboration and independently executing projects.</p>
+    </section>
 
-      h3 {
-        font-size: 1.5rem;
-        font-weight: normal;
-        text-decoration: underline;
-        margin: 10px;
-      }
+    <section class="contact">
+      <h2>Contact</h2>
+      <ul>
+        <li><b><i class="fas fa-phone-square-alt"></i>&nbsp;</b> <a href="tel:+32472247929">+32 472/247.929</a></li>
+        <li><b><i class="fas fa-at"></i>&nbsp;</b><a href="mailto:ward@impesoft.com">ward@impesoft.com</a></li>
+        <li><b><i class="fab fa-linkedin"></i>&nbsp;</b> <a href="http://linkedin.com/in/ward-impe/" target="_blank">linkedin.com/in/ward-impe</a></li>
+        <li><b><i class="fab fa-github"></i></b>&nbsp;<a href="https://github.com/impesoft" target="_blank">github.com/impesoft</a></li>
+        <li><b><i class="fas fa-globe"></i></b>&nbsp;<a href="https://www.impesoft.org" target="_blank">www.impesoft.org</a></li>
+      </ul>
+    </section>
 
-      h4 {
-        margin: 0;
-        margin-left: 20px;
-        font-size: 1rem;
-        padding-bottom: .2rem;
-      }
-      ul h4 {
-        margin-left: 10px;
-      }
-      .fas,
-      .fab {
-        margin-right: 7px;
-      }
-      .contact {
-        width: fit-content;
-        float: right;
-            }
+    <section class="experience">
+      <h2>Work Experience</h2>
+      <ul>
+        <li><b>Full-Stack .NET Developer - E2E Services</b> (11/2024 - 12/2024)<br>
+        Worked on a modern web application using MVC ASP.NET and HTMX.</li>
 
-      .contact a {
-        text-decoration: none;
-        color: #3794ffFF;
-      }
-
-      .profiel {
-        width: 80%;
-      }
-      .quote {
-        padding: 15px;
-          font-style: italic;
-          font-size: 1.49rem;
-        }
-        h4 span {
-          font-weight: lighter;  
-          float:right;
-          margin: 0;
-          padding: 0;
-          font-size: medium;
-        }
-      @media print {
-        body,html {
-          background-color: white;
-        }
-        footer {
-          display: none;
-        }
-        .quote {
-        padding: 15px 0;
-          font-style: italic;
-          font-size: 1.4rem;
-        }
-
-      }
-    </style>  </head>
-  <body>
-    <div id="container">
-      <header>
-        <div class="header-img">
-          <img class="mug-shot" src="Ward_Impe.jpg" alt="Ward Impe's Photo" />
-        </div>
-        <div class="header-text">
-          <div class="header-left">&lt;WARD</div>
-          <div class="header-right">IMPE/&gt;</div>
-        </div>
-      </header>
-      <main>
-        <div class="row">
-          <section class="profiel">
-            <p class="quote">
-              "Gepassioneerde certificeerde Medior Full-stack .NET developer met een
-              pragmatische aanpak en hoog probleemoplossend vermogen, gecombineerd
-              met een onrembare leergierigheid, steeds op de hoogte blijvend 
-              van de nieuwste trends en technologieën."
-            </p>
-          </section>
-          <section class="contact">
-            <br />
-            <p>
-              <a href="tel:+32472247929"
-                ><i class="fas fa-phone-square-alt"></i>+32 472/247.929</a
-              >
-            </p>
-            <p>
-              <a href="mailto:ward@impesoft.com"
-                ><i class="fas fa-at"></i>ward@impesoft.com
-               </a>
-            </p>
-            <p>
-              <a href="http://linkedin.com/in/ward-impe/" target="_blank"
-                ><i class="fab fa-linkedin"></i>linkedin/in/ward-impe/</a
-              >
-            </p>
-           <p>
-             <a href="https://www.impesoft.org" target="_blank"><i class="fas fa-globe"></i>www.impesoft.org</a>
-             </p>
-             <p>
-              <a href="https://github.com/impesoft" target="_blank"><i class="fab fa-github"></i>github.com/impesoft</a>
-             </p>
-          </section>
-          </div>
-        <section class="content">
-          <h3>Werkervaring</h3>
-          <h4 >E2E(End to End Services)<span>11/24-12/24</span></h4> 
+        <li><b>Full-Stack .NET Developer - Dotnetlab</b> (06/2022 - 10/2024)<br>
+        - Developed a jobsite scraper (Blazor, API).<br>
+        - Set up a multi-LLM chatbot (Svelte, SvelteKit, .NET API).<br>
+        - Client projects included:
           <ul>
-            <li >
-              Full-Stack .NET Developer:
-              <span >in MVC ASP.NET, htmx, </span>
-            </li>
+            <li>CVO GO! Antwerpen: AngularJS, C# .NET; POC PayWorld terminal integration.</li>
+            <li>Hifferman/Stumabo (via E-Trace): Angular2, .NET Core; Time-tracking dashboard & SAP ODATA APIs.</li>
+            <li>FWO: Angular2, .NET Core, EF, Dapper; Subsidy portal with dynamic forms.</li>
           </ul>
-            <h4 >Dotnetlab(it4it Services)<span>06/22-10/24</span></h4> 
-          <ul>
-            <li>
-              <b>→ Internal projects as Full-stack .NET developer:</b>
-              <ul class="bullet">
-                <li>
-                  Create jobsite scraper:
-                  <span > Blazor web app + API</span>
-                </li>
-                <li>
-                  Set up a chatbot with selectable multiple LLMs running in container on Azure:
-                  <span >Svelte, Sveltekit +.NET API</span>
-                </li>
-                <li>
-                  Update DotnetLab Cornucopia site:
-                  <span >Svelte, Sveltekit</span>
-                </li>
-              </ul>
-            </li>
-            <li >
-              <b>→ Client projects as Full-stack .NET developer:</b>
-              <ul class="bullet">
-                <li>
-                  CVO GO! Antwerpen:
-                  <span >AngularJS, C# .NET; POC integratie PayWorld terminals</span>
-                </li>
-                <li>
-                  Hifferman/Stumabo via E-Trace:
-                  <span >Angular2, .NET core; Ontwikkelen van onder andere Tijdsregistratie dashboard + de backend implementaties gebruikmakend van SAP api's ODATA en verschillende databases (Entitiy Framwork)</span>
-                </li>
-                <li>FWO:
-                  <span >Angular2, SQL queries, backend C# .NET api's, werken met EF & Dapper ter ondersteuning van hun eloket (portal), angular dynamic forms (aanvragen van subsidies voor onderzoeken), omzetten oude MVC3 eloket portal naar Angular frontend met C# .Net API backend.</span>
-                </li>
-              </ul>
-            </li>           
-          </ul>
+        </li>
 
-          <h4 >Integri Services<span>08/21-06/22</span></h4>
+        <li><b>Backend .NET Developer - Integri Services</b> (08/2021 - 06/2022)<br>
+        - Built APIs, microservices, RabbitMQ integrations, and worked with diverse database types.<br>
           <ul>
-            <li >
-                Backend .NET developer at Mediahuis:
-              <span >Opzetten allerhande API's, Atom/Rss feeds, werken met verscheidene databasetypes aldaniet relationeel, rabbitMQ, microservices, docker containers, etc.</span>
-            </li>
-          <li >
-              Vast Contract als Consultant:
-            <span >Intern project, maken van een login pagina (inloggend met AWS Cognito).</span>
-          </li>
-            <li >
-                Stage:
-              <span >Als .NET ontwikkelaar met C# MVC omgeving, inleiding tot het intern project: Veeam Portal for scalable 365 Backups</span>
-            </li>
+            <li>Mediahuis(as backend developer): Atom/RSS feeds, scalable microservices, polling service, Oracle crawler,...</li>
           </ul>
-          <h4 >'t Kofschip/ eLiXir (Gent)<span>09/00-03/20</span></h4>
-          <ul>
-            <li >
-              Diskjockey & Videojockey:
-              <span >Disc-jockey bij ’t Kofschip/ eLiXir te Gent tot maart 2020 (beëindigd door covid-19).</span>
-            </li>
-          </ul>
-          <h4 >UUnet/ World-Online/ Tiscali<span>07/98-09/00</span></h4>
-          <ul>
-            <li >
-              B2B-helpdesk medewerker:
-              <span >Helpdesk medewerker bij UUnet/ World-Online/ Tiscali</span>
-            </li>
-          </ul>
-          <h4 >Ministerie van Landsverdediging<span>06/93-06/95</span></h4>
-          <ul>
-            <li >
-              Storm fuselier:
-              <span >2 Jaar Ministerie van Landsverdediging. Ik was niet meer dienstplichtig, doch wenste mezelf te testen wat betreft discipline.</span>
-            </li>
-          </ul>
+        </li>
+      </ul>
+    </section>
 
-          <h3>Opleidingen</h3>
-          <h4 >Microsoft Certified: Azure Developer Associate (AZ-204)<span>(01/24) recent vernieuwd voor 2025</span></h4> 
-          <ul>
-            <li>
-              <span > Build end-to-end solutions in Microsoft Azure to create
-                Azure Functions, implement and manage web apps, develop solutions
-                utilizing Azure storage, and more.</span>
-            </li>
-            <h4 >Stage at Integri Services:</h4> 
-            <li>
-              <span >Inleiding tot het intern project: Veeam Portal for
-                scalable 365 Backups.</span>
-            </li>
-            <h4 >Cursus .NET ontwikkelaar met C#:</h4> 
-            <li>
-              <span >.NET ontwikkelaar
-                met C# (omvat maar niet beperkt tot: SQL, Entity Framework, WPF, XML,
-                Xamarin, JSON, SCRUM, AGILE, Angular, Typscript, ASP.NET,…)</span>
-            </li>
-            <h4 >
-              Inleiding tot PHP: 
-            </h4>
-            <li>
-              <span >
-             Inleiding tot PHP (VDAB
-              online via zelfstudie), PHP en databanken, Webdesign - Stylesheets in
-              CSS3, Websites ontwerpen met HTML 5, Programmatie logica, ICT 4U: Deel1:
-              Web-development
-              </span>
-            </li>
-            <h4 >
-              PC-technicus met kennis van netwerken:
-            </h4>
-            <li>
-              <span >
-                PC-technicus met kennis van netwerken (VDAB) gecertificeerd PC technicus
-              </span>
-            </li>
-            <h4 >
-              PC Technicus en Elektronica vooropleiding:
-            </h4 >
-            <li>
-              <span >
-                Basis elektriciteit, basis elektronica, Assemblage pc, besturingssystemen,
-              Netwerking, basis active directory
-            </span>
-          </li>
-          </ul>
+    <section class="education">
+      <h2>Education & Certifications</h2>
+      <ul>
+        <li><b>Microsoft Certified: Azure Developer Associate</b> (AZ-204) - Renewed for 2025</li>
+        <li><b>.NET Developer with C#</b> (VDAB)</li>
+        <li><b>Introduction to PHP</b> (VDAB online)</li>
+        <li><b>HTML5/CSS3/Javascript</b> (VDAB online)</li>
+        <li><b>Python</b> (learn.microsoft.com)</li>
+        <li><b>Blazor - Complete Guide[.NET 9]</b> (udemy)</li>
+        <li><b>Blazor - Getting started</b> (Dometrain)</li>
+        <li><b>Blazor - Deep Dive</b> (Dometrain)</li>
+        <li><b>Unit testing in C#</b> (Dometrain)</li>
+        <li><b>Test-driven development</b> (Dometrain)</li>
+      </ul>
+    </section>
 
-          <h3>Belangrijkste Vaardigheden en Kenmerken</h3>
-          <ul>
+    <section class="skills">
+      <h2>Skills</h2>
+      <div class="skills">
+        <div><b>Languages:</b> C#, SQL, JavaScript, TypeScript, Linq, Powershell</div>
+        <div><b>Frameworks:</b> ASP.NET, Blazor, Angular, AngularJS, MAUI, </div>
+        <div><b>Tools:</b>Github, Devops platform, Atlassian Suite, DevExpress</div>
+        <div><b>Technologies:</b>Git, Docker/Kubernetes, Microservices, Entity Framework, Dapper, Azure Service Bus/AWS SQS/SNS, RabbitMQ/ElasticSearch</div>
+        <div><b>Databases:</b> SQL, NoSQL</div>
+        <div><b>Testing:</b> Unit Testing (NUnit, xUnit, bUnit), E2E Testing (Playwright, Selenium, Puppeteer)</div>
+        <div><b>Soft Skills:</b> Diplomatic, with strong problem-solving skills, 
+          analytical and logical (beta tester since 1999), efficient, empathetic when needed, 
+          and highly adaptable. Experienced with challenging clients (30+ years in hospitality), 
+          assertive, stress-resilient, flexible, eager to learn, and contagiously motivated.</div>
+      </div>
+    </section>
 
-            <li >Languages & Frameworks:
-              <span >
-                C# .NET Core/Framework, MAUI (Xamarin), Blazor, Web API, Linq, HTML5/CSS3, 
-                Bootstrap, Javascript/ECMAScript, Angular/AngularJS, PrimeNG, Typescript, UWP, WPF
-              </span>
-            </li>
-              
-            <li >Principles & Methodologies:
-              <span >
-                SOLID/YAGNI/KISS, Agile/Scrum/Kanban, DevOps, CQRS/Mediatr
-              </span>
-            </li>
-            
-            <li >Tools & Technologies:
-              <span >
-                Git/Github, Atlassian (Jira/Confluence), Azure Service Bus, AWS SQS/SNS, RabbitMQ, 
-                ElasticSearch, Microservices, Docker/Kubernetes, CLI (CMD/Powershell/Linux Bash), 
-                Databases (SQL, MySQL, CosmosDB, MongoDB, DynamoDb), Dapper/Entity Framework, 
-                Azure CI/CD Pipelines, DevExpress
-              </span>
-            </li>
-            
-            <li >Testing:
-              <span >
-                Unit Testing (NUnit, xUnit, bUnit), E2E Testing (Playwright, Selenium, Puppeteer)
-              </span>            
-            </li>
-            <li >Andere:
-
-              <span >
-                diplomatisch, ervaring met moeilijke klanten(30+ jaar Horeca), assertief, stresbestendig,
-                Probleemoplossend vermogen, analytisch en logisch (Bèta-tester
-                sinds 1999), Efficiënt, Empathisch waar nodig. Hoog aanpassingsvermogen.</span>
-              </li>
-          </ul>
-         <h3>Interesses</h3>
-         <p class="bullet">
-           ICT (zo wat alles IT gerelateerd: Assemblage, Netwerken, Development,...), PC troubleshooter, 
-           Web design (HTML5, PHP, JS, CSS3), Alpha/Beta Tester dj software, Disk jockey (Allround),
-           Volgen van technologische updates documentatie/nieuws</p>
-       </section>
-      </main>
-      <footer>
-      </footer>
-    </div>
-  </body>
+    <section class="interests">
+      <h2>Interests</h2>
+      <p>ICT, Web Development, Beta Testing, Networking, Troubleshooting, HTML6, CSS5, PhP, Disk Jockeying, Blazor, Following technology updates.</p>
+    </section>
+  </div>
+  <footer>
+    &copy; 2025 Ward Impe - All Rights Reserved
+  </footer>
+</body>
 </html>
