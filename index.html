@@ -1,322 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ward Impe - Curriculum Vitae</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-  integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
-  crossorigin="anonymous"
-/>
-<style>
-  @font-face {
-  font-family: 'source_code_proregular';
-  src: url('sourcecodepro-light-webfont.woff2') format('woff2'),
-    url('sourcecodepro-light-webfont.woff') format('woff');
-}
-body {
-font-family: 'Roboto', sans-serif;
-margin: 0;
-background-color: white;
-color: #333;
-line-height: 1.6;
-}
-header {
-font-family: 'source_code_proregular', sans-serif;
-margin: auto;
-max-width: 1200px;
-background-color: #ff9900;
-color: white;
-padding: 0 0 0 0;
-text-align: center;
-background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1200 800"><path stroke="%23000000" d="M65 0 L20 125 H1130 L1180 0" fill="%23ff9900CC"/></svg>') no-repeat top right;
-background-size: cover;
-}
-header h1 {
-margin: 0;
-font-size: 2.5rem;
-}
-header p {
-margin: 5px 0 0;
-font-size: 1.2rem;
-}
-.container {
-top: 0;
-clear: both;
-max-width: 1200px;
-margin: 20px auto;
-background: white;
-padding: 0 20px;
-border-radius: 10px;
-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-display: grid;
-grid-template-columns: 3fr 1fr;
-gap: 20px;
-}
-section {
-margin-bottom: 0;
-}
-section h2 {
-margin-bottom: 0;
-font-size: 1.5rem;
-border-bottom: 2px solid #ff9900;
-padding-bottom: 5px;
-}
-ul {
-list-style-type: none;
-padding: 0;
-}
-ul li {
-margin: 5px 0;
-}
-.skills {
-display: flex;
-flex-wrap: wrap;
-grid-column-gap: 15px;
-}
-.skills div div{
-background-color: #f4f4f4;
-padding: 10px 15px;
-border-radius: 5px;
-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-margin-bottom: 15px;
-}
-.contact a {
-color: #ff9900;
-text-decoration: none;
-}
-.contact a:hover {
-text-decoration: underline;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ward Impe - Curriculum Vitae</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: midnightblue;
+            --secondary-color: mediumslateblue;
+            --background-color: #ffffff;
+            --text-color: #333333;
+        }
+
+        body {
+            font-family: Roboto, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--primary-color);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        header p {
+            margin: 5px 0 0;
+            font-size: 1.2em;
+        }
+
+        header .contact-info {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            font-size: 0.9em;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 5px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 10px 0;
+        }
+
+        a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .skills, .achievements {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(fit-content, 1fr));
+            gap: 10px;
+        }
+
+        .skills div {
+            border-radius: 5px;
+            padding: 1px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .achievements div {
+            background-color: rgba(107, 170, 243, 0.2);
+            border-radius: 5px;
+            padding: 0px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        @media print {
+            body {
+                line-height: 1.2;
+                padding: 0;
+                margin: 0;
+            }
+            section {
+                page-break-inside: avoid;
+            }
+            header {
+            background: var(--primary-color);
+            color: white;
+            text-align: space-around;
+            width:100%;
+            margin: 0;
+        }
+        header .contact-info {
+            margin: 0;
+            margin-top: 10px;
+            padding: 0;
+            font-size: 0.8em;
+            width: 100%;
+        }
 footer {
-grid-column: 1 / -1;
-text-align: center;
-margin-top: 20px;
-font-size: 0.9rem;
-color: #666;
+    display: none;
 }
-.header-img {
-float: left;
-  padding: 0px 0px 0px 70px;
-  flex: 1;
-  display: flex;
-  justify-content: center;
-}
-.mug-shot {
- margin:20px;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-.header-left,
-.header-right {
- font-size: 2.5rem;
- padding: 0;
-  margin: 0;
-}
-.header-right {
-  width: 70%;
-  text-align: right;
-}
-.header-left {
-width: 100%;
-text-align: left;
-padding-right: 10rem;
-}
-.header-middle {
- font-family: 'Roboto', sans-serif;
-
- width: 70%;
- color: #000;
-  font-size: 1.5rem;
-  font-weight: 500;
-  margin: 0;
-  text-align: center;
-}
-.header-text {
-  flex: 3;
-  display: flex;
-  flex-direction: column;
-  justify-content: justify;
-  text-align: center;
-  font-size: 4rem;
-  padding: 0 0 0 50px;
-}
-.fas,
-.fab {
- font-size: large;
-  margin-right: 7px;
-}
-.summary {
-  font-size: 1.5rem;
-  font-weight: 300;
-  font-style: italic;
-}
-@media print {
-  body {
-    font-size: small;
-    line-height: 1;
-  }
-  .container {
-top: 0;
-clear: both;
-max-width: 1200px;
-margin: 20px auto;
-background: white;
-padding: 0 20px;
-border-radius: 10px;
-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-display: grid;
-grid-template-columns: 5fr 2fr;
-gap: 20px;
-}
-  .header-left{
-margin: 25px 0 0 0;
-          }
-header {
- height: 200px;
- font-size: 2.5rem;
- padding: 0;
-  margin: 0;
-  background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1200 200"><path stroke="%23000000" d="M65 0 L0 175 H1130 L1200 0 H65" fill="%23ff9900CC"/></svg>') no-repeat top right;
-
-}
-  header h1 {
-margin: 0;
-font-size: 1.5rem;
-}
-header p {
-margin: 5px 0 0;
-font-size: .8rem;
-}
-section h2 {
-margin-bottom: 0;
-font-size: 1.2rem;
-border-bottom: 2px solid #ff9900;
-padding-bottom: 5px;
-}
-footer {
-display: none;
-}
-section {
-margin-bottom: 0;
-}
-.header-middle {
- font-family: 'Roboto', sans-serif;
-
- width: 70%;
- color: #000;
-  font-size: 1.2rem;
-  font-weight: 500;
-  margin: 50px 0 0 0;
-  text-align: center;
-}
-
-.summary {
-  font-size: 1.3rem;
-  font-weight: 300;
-  font-style: italic;
-}
-}
-</style>
+        }
+    </style>
 </head>
 <body>
-  <header>
-   <div class="header-img">
-    <img class="mug-shot" src="Ward_Impe.jpg" alt="Ward Impe's Photo" />
-  </div>
-  <div class="header-text">
-    <div class="header-left">&lt;WARD</div>
-    <div class="header-right">IMPE/&gt;</div>
-    <div class="header-middle">Medior Full-Stack .NET Developer</div>
-  </div>
-  </header>
-  <div class="container">
-    <section class="summary">
-      <h2>Professional Summary</h2>
-      <p>Passionate and certified Medior Full-Stack .NET developer with a pragmatic approach and strong problem-solving abilities. Skilled in Blazor, .NET Core, and modern web technologies, with extensive experience in team collaboration and independently executing projects.</p>
-    </section>
-
-    <section class="contact">
-      <h2>Contact</h2>
-      <ul>
-        <li><b><i class="fas fa-phone-square-alt"></i>&nbsp;</b> <a href="tel:+32472247929">+32 472/247.929</a></li>
-        <li><b><i class="fas fa-at"></i>&nbsp;</b><a href="mailto:ward@impesoft.com">ward@impesoft.com</a></li>
-        <li><b><i class="fab fa-linkedin"></i>&nbsp;</b> <a href="http://linkedin.com/in/ward-impe/" target="_blank">linkedin.com/in/ward-impe</a></li>
-        <li><b><i class="fab fa-github"></i></b>&nbsp;<a href="https://github.com/impesoft" target="_blank">github.com/impesoft</a></li>
-        <li><b><i class="fas fa-globe"></i></b>&nbsp;<a href="https://www.impesoft.org" target="_blank">www.impesoft.org</a></li>
-      </ul>
-    </section>
-
-    <section class="experience">
-      <h2>Work Experience</h2>
-      <ul>
-        <li><b>Full-Stack .NET Developer - E2E Services</b> (11/2024 - 12/2024)<br>
-        Worked on a modern web application using MVC ASP.NET and HTMX.</li>
-
-        <li><b>Full-Stack .NET Developer - Dotnetlab</b> (06/2022 - 10/2024)<br>
-        - Developed a jobsite scraper (Blazor, API).<br>
-        - Set up a multi-LLM chatbot (Svelte, SvelteKit, .NET API).<br>
-        - Client projects included:
-          <ul>
-            <li>CVO GO! Antwerpen: AngularJS, C# .NET; POC PayWorld terminal integration.</li>
-            <li>Hifferman/Stumabo (via E-Trace): Angular2, .NET Core; Time-tracking dashboard & SAP ODATA APIs.</li>
-            <li>FWO: Angular2, .NET Core, EF, Dapper; Subsidy portal with dynamic forms.</li>
-          </ul>
-        </li>
-
-        <li><b>Backend .NET Developer - Integri Services</b> (08/2021 - 06/2022)<br>
-        - Built APIs, microservices, RabbitMQ integrations, and worked with diverse database types.<br>
-          <ul>
-            <li>Mediahuis(as backend developer): Atom/RSS feeds, scalable microservices, polling service, Oracle crawler,...</li>
-          </ul>
-        </li>
-      </ul>
-    </section>
-
-    <section class="education">
-      <h2>Education & Certifications</h2>
-      <ul>
-        <li><b>Microsoft Certified: Azure Developer Associate</b> (AZ-204) - Renewed for 2025</li>
-        <li><b>.NET Developer with C#</b> (VDAB)</li>
-        <li><b>Introduction to PHP</b> (VDAB online)</li>
-        <li><b>HTML5/CSS3/Javascript</b> (VDAB online)</li>
-        <li><b>Python</b> (learn.microsoft.com)</li>
-        <li><b>Blazor - Complete Guide[.NET 9]</b> (udemy)</li>
-        <li><b>Blazor - Getting started</b> (Dometrain)</li>
-        <li><b>Blazor - Deep Dive</b> (Dometrain)</li>
-        <li><b>Unit testing in C#</b> (Dometrain)</li>
-        <li><b>Test-driven development</b> (Dometrain)</li>
-      </ul>
-    </section>
-
-    <section class="skills">
-      <h2>Skills</h2>
-      <div class="skills">
-        <div><b>Languages:</b> C#, SQL, JavaScript, TypeScript, Linq, Powershell</div>
-        <div><b>Frameworks:</b> ASP.NET, Blazor, Angular, AngularJS, MAUI, </div>
-        <div><b>Tools:</b>Github, Devops platform, Atlassian Suite, DevExpress</div>
-        <div><b>Technologies:</b>Git, Docker/Kubernetes, Microservices, Entity Framework, Dapper, Azure Service Bus/AWS SQS/SNS, RabbitMQ/ElasticSearch</div>
-        <div><b>Databases:</b> SQL, NoSQL</div>
-        <div><b>Testing:</b> Unit Testing (NUnit, xUnit, bUnit), E2E Testing (Playwright, Selenium, Puppeteer)</div>
-        <div><b>Soft Skills:</b> Diplomatic, with strong problem-solving skills, 
-          analytical and logical (beta tester since 1999), efficient, empathetic when needed, 
-          and highly adaptable. Experienced with challenging clients (30+ years in hospitality), 
-          assertive, stress-resilient, flexible, eager to learn, and contagiously motivated.</div>
-      </div>
-    </section>
-
-    <section class="interests">
-      <h2>Interests</h2>
-      <p>ICT, Web Development, Beta Testing, Networking, Troubleshooting, HTML6, CSS5, PhP, Disk Jockeying, Blazor, Following technology updates.</p>
-    </section>
-  </div>
-  <footer>
-    &copy; 2025 Ward Impe - All Rights Reserved
-  </footer>
+    <header>
+        <h1>Ward Impe</h1>
+        <p>Medior Full-Stack .NET Developer</p>
+        <div class="contact-info">
+            <div>Email: <a href="mailto:ward@impesoft.com">ward@impesoft.com</a></div>
+            <div>Phone: <a href="tel:+32472247929">+32 472 247 929</a></div>
+            <div>LinkedIn: <a href="https://linkedin.com/in/ward-impe">linkedin.com/in/ward-impe</a></div>
+            <div>GitHub: <a href="https://github.com/impesoft">github.com/impesoft</a></div>
+        </div>
+    </header>
+    <div class="container">
+        <section>
+            <h2>Professional Summary</h2>
+            <p>Certified Medior Full-Stack .NET Developer with over 4 years of experience in designing and implementing scalable web applications and SaaS solutions. Proficient in Blazor, .NET Core, and modern web technologies. Demonstrated ability to lead projects and collaborate effectively within agile teams.</p>
+        </section>
+        <section>
+            <h2>Technical Skills</h2>
+            <div class="skills">
+                <div><b>Languages:</b> C#, SQL, JavaScript, TypeScript, PowerShell</div>
+                <div><b>Frameworks:</b> ASP.NET Core, Blazor, Angular2, AngularJS, Svelte/SvelteKit, Entity Framework</div>
+                <div><b>Tools & Technologies:</b> Docker, Kubernetes, RabbitMQ, ElasticSearch, Dapper, Azure Service Bus/AWS SQS/SNS, Git, Github, Devops platform, Atlassian Suite, DevExpress, MudBlazor,...</div>
+                <div><b>Databases:</b> SQL Server, MongoDB, CosmosDB, DynamoDb, MySQL</div>
+                <div><b>Testing:</b> NUnit, xUnit, bUnit, Selenium, Playwright</div>
+            </div>
+        </section>
+        <section>
+            <h2>Achievements</h2>
+            <div class="achievements">
+                <div><b>Mediahuis: </b>Implemented a scalable microservice for Oracle API metadata processing.</div>
+                <div><b>CVO GO! Antwerp: </b>Delivered a POC for integrating Payworld terminals, enhancing payment processing capabilities.</div>
+                <div><b>DotnetLab: </b>Automated job listings aggregation, more than doubled data collection efficiency.</div>
+                <div><b>FWO: </b>Designed a reusable dynamic forms solution, improving development speed and maintainability.</div>
+                <div><b>E2E: </b>Developed facilitator modules for managing rentals, registrations, and events effectively.</div>
+            </div>
+        </section>
+        <section>
+            <h2>Professional Experience</h2>
+            <ul>
+                <li><b>E2E Services</b> (November 2024 - December 2024)<br>
+                    <ul>
+                        <li><b>Facilitator Modules:</b> Developed online management tools for room and equipment rentals, registrations, events, and ticket sales.</li>
+                    </ul>
+                </li>
+                <li><b>Dotnetlab (IT4IT Services)</b> (June 2022 - October 2024)<br>
+                    <ul>
+                        <li><b>Job Site Scraper Development:</b> Engineered a dynamic scraper enabling users to define and crawl job sites, extracting job details into a SQL database, and implementing email notifications and location-based search features.</li>
+                        <li><b>LLM-Integrated Chat Application:</b> Developed a Svelte/SvelteKit application with a backend API, facilitating frontend-switchable Large Language Models (LLMs).</li>
+                        <li><b>Payworld Terminal Integration:</b> Delivered a fully functional Proof of Concept for integrating Payworld terminals into AngularJS/.NET Framework infrastructure.</li>
+                        <li><b>Online platform or portal tailored to facilitate the process of applying for research funding:</b> Transformed a static template-based solution into a project with dynamic reusable form components.</li>
+                        <li><b>Hifferman/Stumabo (via E-Trace):</b> Developed a SaaS Time-Tracking Solution using Angular2 and .NET Core. Integrated SAP ODATA APIs and optimized database performance with Entity Framework.</li>
+                    </ul>
+                </li>
+                <li><b>Integri Services</b> (August 2021 - June 2022)<br>
+                    <ul>
+                        <li><b>365 Backup Access Portal:</b> Developed a SaaS-based internal access portal for a 365 backup solution utilizing AWS Cognito.</li>
+                        <li><b>Article Metadata Enhancement Microservice:</b> Created a standalone microservice for Mediahuis to enhance content metadata management through Oracle crawler API integrations.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Education & Certifications</h2>
+            <ul>
+                <li><b>Microsoft Certified: Azure Developer Associate (AZ-204)</b> (Renewed January 2025)</li>
+                <li><b>.NET Developer with C#</b> - VDAB (2020-2021)</li>
+                <li><b>Inleiding tot PHP</b> - VDAB (2020)</li>
+                <li><b>HTML5/CSS3/Javascript</b> (VDAB online)</li>
+                <li><b>Blazor - Complete Guide[.NET 9]</b> (udemy)</li>
+                <li><b>Blazor - Getting started</b> (Dometrain)</li>
+                <li><b>Blazor - Deep Dive</b> (Dometrain)</li>
+                <li><b>Unit testing in C#</b> (Dometrain)</li>
+                <li><b>Test-driven development</b> (Dometrain)</li>
+            </ul>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2025 Ward Impe - All Rights Reserved</p>
+    </footer>
 </body>
 </html>
